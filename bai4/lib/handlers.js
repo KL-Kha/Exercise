@@ -11,14 +11,22 @@ exports.api = {
     console.log("Email (from visible form field): " + req.body.email);
     res.send({ result: "success" });
   },
+  vacationPhotoContest: (req, res, fields, files) => {
+    console.log("field data: ", fields);
+    console.log("files: ", files);
+    res.send({ result: "success" });
+  },
+  uploadedImages: (req, res, fields, files) =>{
+    console.log("field data: ", fields);
+    console.log("files: ", files);
+    res.send({ result: "success" });
+  },
+  uploadedImagesError: (req, res, error)=>{
+    console.log("error: ", error);
+    res.send({ result: "success" });
+  }
 };
 
 exports.vacationPhotoContestAjax = (req, res) => {
   res.render("vacation-photo-ajax");
-};
-
-exports.api.vacationPhotoContest = (req, res, fields, files) => {
-  console.log("field data: ", fields);
-  console.log("files: ", files);
-  res.send({ result: "success" });
 };

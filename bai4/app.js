@@ -14,11 +14,20 @@ app.use(express.static(__dirname + '/public'))
 app.use(express.json())
 app.use(express.urlencoded())
 
+const handlers = require('./lib/handlers');
+
 app.get('/', (req, res) => {
     res.render('home')
 })
 
-const handlers = require('./lib/handlers');
+app.post('/api/upload/images', (req, res) => {
+    const form = new multiparty.Form();
+
+    form.parse(req, (err, fields, files)=>{
+        if (err) return handlers.api.uploadedImagesError(req, res, err.message)
+        handlers.api.uploadedImages(req, res, fields, files)
+    });
+})
 
 // #region Code in slide
 // app.get('/vacation-photo-ajax', handlers.vacationPhotoContestAjax);

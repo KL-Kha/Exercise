@@ -1,5 +1,5 @@
 <h1 style="text-align: center;">Upload multi pictures and add note to each picture.</h1>
-<form>
+<form enctype="multipart/form-data" id="form-multi-pictures" role="form">
   <div class="row pl-5">
     <div class="col-md-10">
       <input
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="col-md-2">
+    <div id="operation-div" class="col-md-2">
       <label class="btn btn-primary" for="image-uploaded">
         <i class="fas fa-plus"></i>
       </label>
@@ -27,6 +27,12 @@
         accept="image/*"
         id="image-uploaded"
       />
+
+      {{!-- <button id="button-submit-form" type="submit" class="btn btn-success">Upload Picture and Note</button> --}}
     </div>
+
+    
   </div>
 </form>
+
+<script src="/js/uploadFile.js"></script>

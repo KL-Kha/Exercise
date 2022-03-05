@@ -1,18 +1,18 @@
-// Click to download file
-$(document).on("click", "div .custom-file-item", function() {
-    if ($(this).attr("href") != undefined) {
+// // Click to download file
+// $(document).on("click", "div .custom-file-item", function() {
+//     if ($(this).attr("href") != undefined) {
 
-        //Download file
-        let href = $(this).attr("href");
-        var link = document.createElement('a');
-        link.href = href;
-        link.download = href.substring(href.lastIndexOf("/") + 1);
-        link.dispatchEvent(new MouseEvent('click'));
+//         //Download file
+//         let href = $(this).attr("href");
+//         var link = document.createElement('a');
+//         link.href = href;
+//         link.download = href.substring(href.lastIndexOf("/") + 1);
+//         link.dispatchEvent(new MouseEvent('click'));
 
-        // Mở file
-        // window.location.href = $(this).attr("href");
-    }
-})
+//         // Mở file
+//         // window.location.href = $(this).attr("href");
+//     }
+// })
 
 // File extension
 const extension_icons = {
@@ -34,14 +34,21 @@ $(document).on("change", "#image-uploaded", function() {
         $("#file-placeholder").hide();
     }
 
+    if ( $("#button-submit-form").length == 0 ) {
+        generateSubmitFormButton();
+    }
+
     files = [];
     // Lấy data files
     if ($("#image-uploaded").data("files") != null) {
         files = $("#image-uploaded").data("files");
     }
 
+    console.log($("#image-uploaded")[0].files);
+
     for (let i = 0; i < $("#image-uploaded")[0].files.length; i++) {
-        let file = $("#image-uploaded")[0].files[i];
+        
+        const file = $("#image-uploaded")[0].files[i];
 
         if (checkFileList(files, file) > -1) {
             continue;
@@ -53,7 +60,7 @@ $(document).on("change", "#image-uploaded", function() {
             return;
         }
 
-        let ext = file.name.split(".").at(-1).toLowerCase();
+        const ext = file.name.split(".").at(-1).toLowerCase();
         if (extension_icons[ext] == undefined) {
             alert("Hệ thống không hỗ trợ upload tệp tin đuôi ." + ext);
             return;
@@ -63,16 +70,14 @@ $(document).on("change", "#image-uploaded", function() {
         files.push(file)
 
         // Update UI
-        var item = document.createElement("div");
+        const item = document.createElement("div");
         item.classList.add("custom-file-item");
 
-
-        var title = document.createElement("div");
+        const title = document.createElement("div");
         title.classList.add("custom-file-title");
 
         // Tạo icon từ file extension
-
-        var icon = document.createElement("i");
+        const icon = document.createElement("i");
         icon.classList.add("fas");
         icon.classList.add(extension_icons[ext]);
 
@@ -84,14 +89,25 @@ $(document).on("change", "#image-uploaded", function() {
         type.innerHTML = file.type;
         title.appendChild(filename);
         title.appendChild(type);
-        var remove = document.createElement("i");
+
+        const remove = document.createElement("i");
         remove.classList.add("fas");
         remove.classList.add("fa-minus-circle");
         remove.classList.add("custom-file-remove");
+
+        // Input note
+        const input_note = document.createElement("input");
+        input_note.type = "text";
+        input_note.placeholder = "Input your note to this pictures";
+        input_note.required = true;
+        input_note.classList.add("form-control");
+        input_note.classList.add("input-text-image-note");
+
         $(remove).data("file", file);
         item.appendChild(icon);
         item.appendChild(title);
         item.appendChild(remove);
+        item.appendChild(input_note);
 
         $("#custom-file-list").append(item);
     }
@@ -107,10 +123,24 @@ $(document).on("click", ".custom-file-remove", function() {
 
     if (files.length < 1) {
         $("#file-placeholder").show();
+        $("#operation-div").children().last().remove();
     }
 
     $("#image-uploaded").data("files", files);
 })
+
+function generateSubmitFormButton(){
+    const div_container = document.getElementById("operation-div");
+    const submit_button = document.createElement("button");
+
+    submit_button.setAttribute("class","btn btn-success");
+    submit_button.setAttribute("type","submit");
+    submit_button.setAttribute("id","button-submit-form");
+
+    submit_button.innerHTML = 'Upload Picture and Note';
+    
+    div_container.appendChild(submit_button);
+}
 
 function checkFileList(files, file) {
     for (let i = 0; i < files.length; i++) {
@@ -120,3 +150,28 @@ function checkFileList(files, file) {
     }
     return -1;
 }
+
+$("#form-multi-pictures").on("submit", e=>{
+    e.preventDefault();
+    
+    let files = []
+    if ($("#image-uploaded").data("files") != null) {
+        files = $("#image-uploaded").data("files");
+    }
+
+    const formData = new FormData();
+    formData.append("image-note","HHIHI");
+    formData.append("image-note","huhu");
+    formData.append("image-note","haha");
+    for (let i = 0; i < files.length; i++) {
+        formData.append("image-uploaded", files[i])
+    }
+
+    console.log(formData.getAll("image-uploaded"));
+
+    fetch('/api/upload/images', { method: 'post', body:formData })
+    .then(result =>{
+      console.log(result);
+    })
+    .catch();
+});
