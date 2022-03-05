@@ -1,0 +1,32 @@
+<h1 style="text-align: center;">Upload multi pictures and add note to each picture.</h1>
+<form>
+  <div class="row pl-5">
+    <div class="col-md-10">
+      <input
+        id="file-placeholder"
+        class="form-control"
+        readonly
+        placeholder="Chưa có ảnh nào được chọn"
+      />
+      
+      <!-- List file ảnh ở đây -->
+      <div id="custom-file-list" class="custom-file-list">
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <label class="btn btn-primary" for="image-uploaded">
+        <i class="fas fa-plus"></i>
+      </label>
+
+      <input
+        hidden
+        multiple
+        type="file"
+        name="image-uploaded[]"
+        accept="image/*"
+        id="image-uploaded"
+      />
+    </div>
+  </div>
+</form>

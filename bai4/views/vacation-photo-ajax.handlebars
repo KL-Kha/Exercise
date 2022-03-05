@@ -1,0 +1,46 @@
+<h2>Vacation Photo Contest Ajax</h2>
+<div id="vacationPhotoContestFormContainer">
+  <form
+    class="form-horizontal"
+    id="vacationPhotoContestForm"
+    role="form"
+    enctype="multipart/form-data"
+    method="POST"
+  >
+    <input type="hidden" name="_csrf" value="{{csrf}}" />
+
+    <div class="form-group">
+      <label for="fieldPhoto" class="col-sm-2 controllabel">Vacation photo</label>
+      <div class="col-sm-4">
+        <input
+          type="file"
+          class="form-control"
+          required
+          accept="image/*"
+          id="fieldPhoto"
+          name="photo"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-4">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.getElementById('vacationPhotoContestForm').addEventListener('submit', evt => {
+    evt.preventDefault()
+    
+    const body = new FormData(evt.target)
+    const container = document.getElementById('vacationPhotoContestFormContainer')
+
+    fetch('/api/vacation-photo-contest', { method: 'post', body })
+    .then(result =>{
+      console.log(result);
+    })
+    .catch();
+  })
+</script>
