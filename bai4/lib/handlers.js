@@ -1,29 +1,5 @@
-exports.newsletter = (req, res) => {
-  res.render("newsletter", { csrf: "CSRF token goes here" });
-};
-
-exports.vacationPhotoContestAjax = (req, res) => {
-  res.render("vacation-photo-ajax");
-};
-
 exports.api = {
-  // newsletterSignup: (req, res) => {
-  //   console.log(req.body);
-  //   console.log(req.params);
-  //   console.log("CSRF token (from hidden form field): " + req.body._csrf);
-  //   console.log("Name (from visible form field): " + req.body.name);
-  //   console.log("Email (from visible form field): " + req.body.email);
-  //   res.send({ result: "success" });
-  // },
-  // vacationPhotoContest: (req, res, fields, files) => {
-  //   console.log("field data: ", fields);
-  //   console.log("files: ", files);
-  //   res.send({ result: "success" });
-  // },
   uploadedImages: (req, res, fields, files) => {
-    console.log("field data: ", fields);
-    console.log("files: ", files);
-
     files = files["image-uploaded"];
     fields = fields['image-note'];
     const fs = require("fs");
@@ -31,29 +7,29 @@ exports.api = {
 
     const directoryPath = path.join(__dirname, "../public/upload/img");
 
-    const scanDir_Promise = new Promise( (resolve, reject)=>{
+    const scanDir_Promise = new Promise((resolve, reject) => {
       fs.readdir(directoryPath, function (err, files) {
         if (err) {
-          reject(console.log("Unable to scan directory: " + err.message));
+          reject("Unable to scan directory: " + err.message);
         }
-        
+
         let max_current_img_ID = 0;
 
         files.forEach(function (file) {
           const file_name = path.parse(file).name;
-          if ( parseInt(file_name.split('_')[1]) > max_current_img_ID ){
-            max_current_img_ID = parseInt(file_name.split('_')[1]);
+          if (parseInt(file_name.slice(3)) > max_current_img_ID) {
+            max_current_img_ID = parseInt(file_name.slice(3));
           }
         });
 
         resolve(max_current_img_ID);
       });
     });
-    
-    scanDir_Promise.then( max_current_img_ID =>{
+
+    scanDir_Promise.then(max_current_img_ID => {
       for (let i = 0; i < files.length; i++) {
         const path_file_name = path.parse(files[i].originalFilename);
-        
+
         if (!isFileImage(path_file_name.ext)) {
           res.send({
             code: -1,
@@ -63,34 +39,31 @@ exports.api = {
           });
           return;
         }
-        console.log("Max id in for loop :" + max_current_img_ID);
+
         max_current_img_ID = max_current_img_ID + 1;
-        
-        const new_img_name = './public/upload/img/image_' + max_current_img_ID + path_file_name.ext;
-        const new_txt_name = './public/upload/notes/image_' + max_current_img_ID + '.txt';
-        
+
+        const new_img_name = './public/upload/img/img' + max_current_img_ID + path_file_name.ext;
+        const new_txt_name = './public/upload/notes/img' + max_current_img_ID + '.txt';
+
         fs.writeFile(new_txt_name, fields[i], function (err) {
           if (err) return console.log(err);
-          console.log('Hello World > helloworld.txt');
         });
-        
-        fs.copyFile(files[i].path, new_img_name, err=>{
-          if ( err ){
+
+        fs.copyFile(files[i].path, new_img_name, err => {
+          if (err) {
             console.log(err);
           } else {
-            fs.unlink(files[i].path, ()=>{
+            fs.unlink(files[i].path, () => {
               return;
             });
             console.log("Rename and move image to folder successfully !!");
           }
-          
+
         });
       }
-    }).catch (err =>{
+    }).catch(err => {
       console.log(err)
     });
-
-    
 
     res.send({
       code: 0,
@@ -101,10 +74,50 @@ exports.api = {
   uploadedImagesError: (req, res, error) => {
     res.send({ code: -1, status: false, result: "failed to upload images" });
   },
+  showImageGallery: () => {
+    const fs = require("fs");
+    const path = require("path");
+    const directoryImagePath = path.join(__dirname, "../public/upload/img");
+    const directoryNotesPath = path.join(__dirname, "../public/upload/notes");
+
+    const readImage = new Promise((resolve, reject) => {
+      fs.readdir(directoryImagePath, function (err, files) {
+        if (err) {
+          reject("Unable to scan directory: " + err.message);
+        }
+        resolve(files);
+      });
+    })
+
+    const readNotes = new Promise((resolve, reject) => {
+      fs.readdir(directoryNotesPath, function (err, files) {
+        if (err) {
+          reject("Unable to scan directory: " + err.message);
+        }
+
+        var notes = [];
+
+        for (let i = 0; i < files.length; i++) {
+          const file_name = directoryNotesPath + "/" + files[i];
+
+          try {
+            const data = fs.readFileSync(file_name, 'utf8')
+            notes.push(data);
+          } catch (err) {
+            reject(err);
+          }
+        }
+
+        resolve(notes);
+      });
+    })
+    
+    return Promise.all([readImage, readNotes]);
+  }
 };
 
 function isFileImage(file) {
-  const acceptedImageTypes = [".gif", ".jpg", ".png", ".bmp",".jpeg"];
+  const acceptedImageTypes = [".gif", ".jpg", ".png", ".bmp", ".jpeg"];
 
   return acceptedImageTypes.includes(file);
 }

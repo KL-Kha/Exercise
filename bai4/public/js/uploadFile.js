@@ -123,7 +123,7 @@ $(document).on("click", ".custom-file-remove", function() {
 
     if (files.length < 1) {
         $("#file-placeholder").show();
-        $("#operation-div").children().last().remove();
+        $(".card-footer").empty();
     }
 
     $("#image-uploaded").data("files", files);
@@ -144,19 +144,21 @@ $("#form-multi-pictures").on("submit", e=>{
         formData.append("image-uploaded", files[i]);
     }
 
-    console.log(formData.getAll("image-uploaded"));
-
     fetch('/api/upload/images', { method: 'post', body:formData })
     .then(result =>{
       return result.json();
     }).then( json_result =>{
-        console.log(json_result);
+        if ( json_result.code == 0 && json_result.status ){
+            window.location.href = "image/gallery";
+        } else {
+            alert(json_result.message);
+        }
     })
     .catch();
 });
 
 function generateSubmitFormButton(){
-    const div_container = document.getElementById("operation-div");
+    const div_container = document.getElementsByClassName("card-footer")[0];
     const submit_button = document.createElement("button");
 
     submit_button.setAttribute("class","btn btn-success");
