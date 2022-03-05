@@ -96,12 +96,12 @@ $(document).on("change", "#image-uploaded", function() {
         remove.classList.add("custom-file-remove");
 
         // Input note
-        const input_note = document.createElement("input");
+        const input_note = document.createElement("textarea");
         input_note.type = "text";
         input_note.placeholder = "Input your note to this pictures";
         input_note.required = true;
         input_note.classList.add("form-control");
-        input_note.classList.add("input-text-image-note");
+        input_note.classList.add("text-area-image-note");
 
         $(remove).data("file", file);
         item.appendChild(icon);
@@ -129,6 +129,32 @@ $(document).on("click", ".custom-file-remove", function() {
     $("#image-uploaded").data("files", files);
 })
 
+$("#form-multi-pictures").on("submit", e=>{
+    e.preventDefault();
+    
+    let files = []
+    if ($("#image-uploaded").data("files") != null) {
+        files = $("#image-uploaded").data("files");
+    }
+
+    const formData = new FormData();
+    const input_note = document.getElementsByClassName("text-area-image-note");
+    for (let i = 0; i < files.length; i++) {
+        formData.append("image-note", input_note[i].value);
+        formData.append("image-uploaded", files[i]);
+    }
+
+    console.log(formData.getAll("image-uploaded"));
+
+    fetch('/api/upload/images', { method: 'post', body:formData })
+    .then(result =>{
+      return result.json();
+    }).then( json_result =>{
+        console.log(json_result);
+    })
+    .catch();
+});
+
 function generateSubmitFormButton(){
     const div_container = document.getElementById("operation-div");
     const submit_button = document.createElement("button");
@@ -150,28 +176,3 @@ function checkFileList(files, file) {
     }
     return -1;
 }
-
-$("#form-multi-pictures").on("submit", e=>{
-    e.preventDefault();
-    
-    let files = []
-    if ($("#image-uploaded").data("files") != null) {
-        files = $("#image-uploaded").data("files");
-    }
-
-    const formData = new FormData();
-    formData.append("image-note","HHIHI");
-    formData.append("image-note","huhu");
-    formData.append("image-note","haha");
-    for (let i = 0; i < files.length; i++) {
-        formData.append("image-uploaded", files[i])
-    }
-
-    console.log(formData.getAll("image-uploaded"));
-
-    fetch('/api/upload/images', { method: 'post', body:formData })
-    .then(result =>{
-      console.log(result);
-    })
-    .catch();
-});
