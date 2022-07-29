@@ -1,0 +1,31 @@
+@import '/src/variables';
+
+.header {
+    background-color: $background-color;
+    margin: 0rem -31rem 0rem -31rem;
+}
+
+.navbar {
+    height: 4rem;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+}
+
+.pageLink {
+    color: $primary-color;
+}
+
+.pageLink:hover {
+    color: $primary-color;
+    border-bottom: 0.5px solid $primary-color;
+}
+
+.pageLink:focus {
+    color: $primary-color;
+}

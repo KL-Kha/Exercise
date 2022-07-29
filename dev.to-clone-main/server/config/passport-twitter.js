@@ -1,6 +1,7 @@
+require('dotenv').config();
+
 const passport = require('passport');
 const TwitterStrategy = require('passport-twitter').Strategy;
-require('dotenv').config();
 const { TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, JWT_KEY } = process.env;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -34,12 +35,14 @@ passport.use(
       const { id, displayName, photos } = profile;
       const { profile_image_url: picture, email } = profile._json;
       let user;
+
       try {
         //Has the user signed in with twitter before
         user = await User.findOne({ email }, '-password');
       } catch (err) {
         console.log(err);
       }
+      
       if (!user) {
         let hashedPassword;
         try {

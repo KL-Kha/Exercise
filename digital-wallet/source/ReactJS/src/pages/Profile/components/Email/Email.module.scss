@@ -1,0 +1,23 @@
+@import '/src/variables';
+
+.content {
+    background-color: $background-color;
+    margin-top: 3rem;
+    padding: 3rem;
+    margin-right: 8rem;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+.emailArea {
+    margin-top: 3rem;
+}
+
+.email {
+    width: 20rem;
+}

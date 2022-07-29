@@ -1,0 +1,46 @@
+@import '/src/variables';
+
+.wrapper {
+    justify-content: space-evenly;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.tab:hover {
+    background-color: $background-color;
+}
+
+.content {
+    text-align: left;
+}
+
+.logo {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid $primary-color;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    background-image: url('../../../../../../../public/images/avatar.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transactionName {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+.transactionDate {
+    font-size: 1.5rem;
+}
+
+.transactionStatus {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+}

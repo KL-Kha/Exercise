@@ -1,0 +1,22 @@
+@import '/src/variables';
+
+.content {
+    background-color: $background-color;
+    margin-top: 3rem;
+    padding: 3rem;
+    margin-right: 8rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+.addressArea {
+    margin-top: 3rem;
+}
+
+.address {
+    width: 20rem;
+}
