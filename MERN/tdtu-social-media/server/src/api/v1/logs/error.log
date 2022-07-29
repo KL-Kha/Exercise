@@ -1,0 +1,12 @@
+LOG_ERROR_ID: 293041fa-5703-4ee9-83ae-5f825d794ecd
+TIME: 29-07-2022	20:47:38
+URL: /
+METHOD: GET
+MESSAGE: Not Found !
+--------------------------------------------------------
+LOG_ERROR_ID: 7d9894e8-9c8b-4861-a3e1-d6da4baf1c58
+TIME: 29-07-2022	20:47:55
+URL: /test
+METHOD: GET
+MESSAGE: Not Found !
+--------------------------------------------------------

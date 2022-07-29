@@ -1,1 +1,0 @@
-This folder will store JS file that handle common problems.

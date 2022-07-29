@@ -1,6 +1,0 @@
-/node_modules
-/.idea
-/.vscode
-.env
-package-lock.json
-.vercel

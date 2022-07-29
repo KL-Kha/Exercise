@@ -1,0 +1,98 @@
+@import '/src/variables';
+
+.wrapper {
+	height: 94vh;
+
+	.error {
+		color: red;
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.content {
+		width: 100%;
+		max-width: 46rem;
+		margin: 0 auto;
+		margin-top: 5rem;
+		padding: 6rem 4rem;
+		border: 1px solid #eaeced;
+		border-radius: 0.4rem;
+
+		.logo img {
+			display: block;
+			padding-bottom: 4rem;
+			margin: 0 auto;
+			color: $primary-color;
+			filter: invert(65%);
+		}
+
+		.form {
+			input {
+				padding: 1.8rem 1rem;
+				font-size: 1.8rem;
+
+				+input {
+					margin-top: 1.6rem;
+				}
+			}
+		}
+
+		.resetLink {
+			display: block;
+			margin-top: 0.6rem;
+			text-decoration: none;
+			font-size: 2rem;
+			font-weight: bold;
+			color: $primary-color;
+		}
+
+		.btnLogin {
+			border: none;
+			width: 100%;
+			padding: 1.2rem 0;
+			margin-top: 2.4rem;
+			border-radius: 3rem;
+			background-color: $primary-color;
+			color: white;
+			font-weight: 600;
+		}
+
+		.btnSignUp {
+			display: block;
+			border: 2px solid $primary-color;
+			width: 100%;
+			padding: 0.9rem 0;
+			border-radius: 3rem;
+			color: $primary-color;
+			background-color: white;
+			font-weight: 600;
+			text-align: center;
+			text-decoration: none;
+
+			&:hover {
+				background-color: $primary-color;
+				color: white;
+				opacity: 0.8;
+			}
+		}
+
+		.line {
+			display: block;
+			margin-bottom: 2rem;
+
+			p {
+				font-size: 15px;
+				text-align: center;
+				border-bottom: 2px solid $border-color;
+				position: relative;
+
+				span {
+					background-color: white;
+					position: relative;
+					top: 10px;
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+}
