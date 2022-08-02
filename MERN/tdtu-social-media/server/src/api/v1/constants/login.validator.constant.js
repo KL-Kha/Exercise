@@ -1,0 +1,9 @@
+export const USERNAME_IS_EMPTY = 'Vui lòng nhập tên tài khoản !';
+export const PASSWORD_IS_EMPTY = 'Vui lòng nhập mật khẩu !';
+export const INVALID_PASSWORD_LENGTH = 'Độ dài mật khẩu phải ít nhất 6 ký tự';
+export const WRONG_AUTHENTICATION = 'Sai thông tin tài khoản hoặc mật khẩu!';
+export const SOME_THING_WENT_WRONG = 'Đã có lỗi xảy ra! Vui lòng thử lại sau!';
+export const USER_EXISTS_ALREADY = 'Tên tài khoản đã tồn tại! Vui lòng chọn tên tài khoản khác!';
+export const USER_DOES_NOT_EXIST = 'Tài khoản không tồn tại! Vui lòng kiểm tra lại thông tin!';
+export const TOKEN_IS_EMPTY = 'Không tìm thấy thông tin xác thực! Vui lòng thử lại sau!';
+// export const INVALID_EMAIL_FORMAT = 'EMAIL_IS_IN_WRONG_FORMAT';

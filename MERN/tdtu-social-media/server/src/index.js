@@ -1,13 +1,17 @@
-const createError = require('http-errors');
-const express = require('express');
 require('dotenv').config();
 
-const logEvent = require('./api/v1/helpers/logEvents');
+const logEvent = require('./api/v1/utils/logEvents');
+const createError = require('http-errors');
+const express = require('express');
 
-const configs = require('./configs');
+const configs = require('./configs/app');
+const databaseConfig = require('./configs/database.config');
 const routes = require('./api/v1/routes');
 
 const app = express();
+
+// Connect to database
+databaseConfig();
 
 // Apply config
 configs(app);
@@ -24,12 +28,6 @@ app.use(function (req, res, next) {
 // error handler
 app.use(function (err, req, res, next) {
     logEvent({ message: err.message, requestURL: req.url, requestMethod: req.method });
-
-    // Handle if csrf token is invalid then return json formated error
-    if (err.code === 'EBADCSRFTOKEN') {
-        return res.status(403).json({ status: false, status_code: 403, message: err.message });
-        // OR set status code and error message to req.locals to render on error page
-    }
 
     // set locals, only providing error in development
     res.locals.message = err.message;
