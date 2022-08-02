@@ -1,0 +1,255 @@
+.wrapper {
+    padding: 0;
+}
+
+.about-content {
+    padding: 0 146px;
+    display: flex;
+}
+
+/* Logo */
+.about-image-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+
+.about-image {
+    margin-bottom: 14px;
+}
+
+.about-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.about-image-hover:hover {
+    opacity: 1;
+}
+
+/* Social icons */
+.socials-media-list {
+    list-style: none;
+}
+
+.socials-media-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.social-medial-link {
+    position: relative;
+    display: inline-block;
+}
+
+.social-medial-image {
+
+}
+
+.social-medial-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;   
+}
+
+.social-medial-image-hover:hover {
+    opacity: 1;
+}
+
+.social-media-item {
+    margin-bottom: 54px;
+}
+
+.about-detail {
+    flex: 1;
+    margin-top: 90px;
+}
+
+/* Bio */
+.about-detail h1.about-heading {
+    display: flex;
+    align-items: center;
+    transform: translate(-16%, -16%);
+
+    /* BIG-HEAD */
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 108px;
+    text-transform: capitalize;
+
+    color: #000000;
+}
+
+.about-heading-icon {
+    margin-left: 10px;
+}
+
+.about-detail-content {
+    margin-top: 0px;
+
+    /* h2 */
+    font-family: 'Poppins', 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 30px */
+
+    color: #000000;
+}
+
+.about-detail-content strong{
+    /* h2 */
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* or 30px */
+
+    color: #000000;
+}
+
+/* More About Me */
+.more-about-content {
+    margin-top: 38px;
+    padding: 0 168px;
+}
+
+h2.more-about-outside-heading {
+    margin-bottom: 10px;
+    /* h2 */
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    /* identical to box height, or 30px */
+
+    text-transform: capitalize;
+
+    color: #000000;
+
+}
+
+h1.more-about-main-heading {
+    padding: 30px 36px;
+    /* BIG-HEAD */
+
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 108px;
+    text-transform: capitalize;
+
+    color: #000000;
+}
+
+.more-about-wrapper {
+    background: #D9D9D9;
+    border-radius: 20px;
+}
+
+.more-about-main-content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0 121px;
+    margin-bottom: 38px;
+    
+
+    /* paragraph */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+.col-three {
+    margin-bottom: 54px;
+}
+
+.main-content-list {
+    list-style: none;
+}
+
+/* Education & Software */
+
+.about-specialize {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 168px;
+    padding-bottom: 57px;
+}
+
+.specialize-col {
+    background: #D9D9D9;
+    border-radius: 20px;
+    width: 536px;
+}
+
+.specialize-col h1.specialize-heading {
+    padding: 36px 47px;
+
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 108px;
+    text-transform: capitalize;
+    
+    color: #000000;
+}
+
+.specialize-col .specialize-list {
+    list-style: none;
+    padding: 0px 36px 32px 113px;
+}
+
+.specialize-list h3.specialize-heading {
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 43px;
+    text-transform: capitalize;
+    
+    color: #000000;
+}
+
+.specialize-list p.specialize-description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    
+    color: #000000;
+}
+
+.specialize-list p.specialize-description strong {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+
+    text-transform: none;
+    font-style: italic;
+    
+    color: #8d8e89;
+}

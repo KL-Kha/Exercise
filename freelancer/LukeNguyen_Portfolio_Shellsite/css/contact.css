@@ -1,0 +1,151 @@
+.wrapper {
+    padding: 0;
+    padding-bottom: 26px;
+}
+
+.contact-header {
+    margin: 0 auto;
+    padding: 0 386px;
+    
+}
+
+.contact-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.contact-header-heading {
+    position: absolute;
+
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 181px;
+
+    /* identical to box height */
+    text-transform: capitalize;
+
+    /* #F9DE5A */
+
+    color: #F9DE5A;
+}
+
+.contact-header-btn-group {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 30px;
+}
+
+.contact-header-btn-group .btn{
+    /* SUB-HEAD */
+
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: capitalize;
+
+    /* #0B1419 */
+
+    color: #0B1419;
+
+
+    width: 199px;
+    height: 75px;
+    padding: 7px 20px;
+    /* #F9DE5A */
+
+    background: #F9DE5A;
+    /* #0B1419 */
+
+    border: 4px solid #0B1419;
+    box-shadow: 0px 8.45915px 8.45915px rgba(0, 0, 0, 0.25);
+}
+
+/*  */
+
+.contact-detail-wrapper {
+    padding: 0 332px;
+
+    margin-bottom: 100px;
+}
+
+.contact-form-group{
+    width: 100%;
+    min-height: 138px;
+
+    padding: 40px 0 16px 63px;
+
+    background-color: #D9D9D9;
+    border-radius: 20px;
+
+    margin-bottom: 40px;
+}
+
+.contact-form-group.contact-form-group--large {
+    min-height: 240px;
+}
+
+/* .contact-form-content{
+
+} */
+
+.contact-heading{
+    /* h3 */
+
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 43px;
+    text-transform: capitalize;
+
+    color: #000000;
+}
+
+.contact-form-placeholder{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: normal;
+
+    color: #000000;
+}
+
+.btn.btn-primary.contact-form-button {
+    /* h2 */
+
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    /* identical to box height, or 30px */
+
+    text-align: center;
+    text-transform: capitalize;
+
+    /* #0B1419 */
+
+    color: #0B1419;
+
+    padding: 42px 0;
+    
+    width: 100%;
+
+    border-width: 5px;
+}
+
+.btn.btn-primary.contact-form-button:hover {
+    color: var(--button);
+}

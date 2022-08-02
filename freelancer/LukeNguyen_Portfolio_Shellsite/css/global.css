@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Koulen&display=swap");
+
+:root {
+  /* Colors */
+  --background-dark: #8d8e89;
+  --background-light: #f4eff0;
+  --body-text: #0b1419;
+  --button: #f9de52;
+
+  /* Fonts */
+  --primary-font: "Koulen";
+  --secondary-font: "DM Sans";
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #FBFAFA;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #FBFAFA;
+
+    padding: 25px 26px;
+    position: relative;
+}
+
+/* Button */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    color: #0B1419;
+    line-height: 21.68px;
+    
+    height: 46px;
+    padding: 7px 20px;
+    background-color: transparent;
+    border: 3px solid #0B1419;
+    outline: none;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.btn:hover.btn-primary {
+    background-color: #0B1419;
+    color: #F9DE5A;
+    border-color: #F9DE5A;
+}
+
+.btn.btn-primary {
+    background-color: var(--button);
+
+    /* SUB-HEAD */
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-transform: capitalize;
+
+    /* #0B1419 */
+    color: #0B1419;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.btn.btn-primary.active {
+  background-color: #0B1419;
+  color: #F9DE5A;
+  border-color: #F9DE5A;
+}
+
+/* Footer */
+.footer {
+    margin: 0 auto;
+    max-width: 1388px;
+    min-height: 110px;
+
+    background-color: #D9D9D9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+}
+
+.footer-detail {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Nav */
+.nav-wrapper {
+    padding: 36px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    width: 1440px;
+    z-index: 5;
+}
+
+.nav-menu-wrapper {
+  position: relative;
+}
+
+.nav-menu-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Back */
+.nav-back-wrapper {
+  display: inline-block;
+
+  transform: scale(1.2);
+
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.nav-back-img-hover:hover{
+  opacity: 1;
+}
+
+.nav-back-img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-back-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+
+  width: 100%;
+  height: 100%;
+}
+
+.nav-menu-img-hover:hover {
+  opacity: 1;
+}
+
+.nav-close-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.nav-holder {
+  height: 190px;
+}
+
+.nav-menu-checkbox:checked ~ .nav-close-img-hover {
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+}
+
+.visible-hidden {
+  visibility: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.nav-menu-container{
+  position: absolute;
+  top: calc( 100% + 14px );
+  right: 0;
+
+  width: 255px;
+  height: 224px;
+
+  background-color: #D9D9D9;
+  border-radius: 20px;
+
+  padding-left: 35px;
+  padding-top: 30px;
+}
+
+.nav-list{
+  list-style: none;
+}
+
+.nav-list-item{
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 15px;
+  transition: all 0.25s linear;
+}
+
+.nav-list-item:hover .nav-list-item-link{
+  border-bottom: 2px solid black;
+
+}
+
+.nav-list-item-logo{
+  margin-right: 10px;
+}
+
+.nav-list-item-link{
+  /* h2 */
+
+  font-family: 'Koulen';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  /* identical to box height, or 30px */
+
+  text-transform: capitalize;
+
+  color: #000000;
+  transition: all 0.25s linear;
+}
+
+/* Hover */
+
+.hoverable:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
