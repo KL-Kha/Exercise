@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Koulen&family=Poppins:wght@100;400&display=swap"
         rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/contact.css" />
@@ -23,49 +23,49 @@
 <body>
     <div class="wrapper">
         <!-- Global navigation -->
-        <nav class="nav-wrapper">
-            <a class="nav-back-wrapper" href="index.html">
+        <div class="nav-back-wrapper">
+            <a href="index.html">
                 <img class="nav-back-img" srcset="./images/back.png 2x" alt="Back button">
-
+    
                 <img class="nav-back-img-hover" srcset="./images/back-hover-button.png 2x" alt="Back button hover">
             </a>
+        </div>
+        
+        <div class="nav-menu-wrapper">
+            <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
 
-            <div class="nav-menu-wrapper">
-                <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
-
-                <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
+            <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
 
 
-                <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
+            <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
 
-                <div class="nav-menu-container d-none">
-                    <ul class="nav-list">
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/home.png" alt="" class="nav-list-item-logo">
-                            <a href="index.html" class="nav-list-item-link">HOME</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/user.png" alt="" class="nav-list-item-logo">
-                            <a href="about.html" class="nav-list-item-link">ABOUT</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/pen-tool.png" alt="" class="nav-list-item-logo">
-                            <a href="work.html" class="nav-list-item-link">WORK</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/codesandbox.png" alt="" class="nav-list-item-logo">
-                            <a href="contact.html" class="nav-list-item-link">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="nav-menu-container d-none">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/home.png 2x" alt="Icon home" class="nav-list-item-logo">
+                        <a href="index.html" class="nav-list-item-link">HOME</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/user.png 2x" alt="Icon about" class="nav-list-item-logo">
+                        <a href="about.html" class="nav-list-item-link">ABOUT</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/pen-tool.png 2x" alt="Icon work" class="nav-list-item-logo">
+                        <a href="work.html" class="nav-list-item-link">WORK</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/codesandbox.png 2x" alt="Icon contact" class="nav-list-item-logo">
+                        <a href="contact.html" class="nav-list-item-link">CONTACT</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
 
         <div class="nav-holder"></div>
 
         <div class="contact-header">
             <div class="contact-header-wrapper">
-                <img srcset="./images/4.png 2x" alt="" class="contact-header-image">
+                <img srcset="./images/4.png 2x" alt="LukeNguyen Contact Me" class="contact-header-image">
                 <h1 class="contact-header-heading">CONTACT ME</h1>
             </div>
 
@@ -75,22 +75,22 @@
             <div class="contact-detail-wrapper">
                 <div class="contact-form-group">
                     <div class="contact-form-content">
-                        <h2 class="contact-heading">Name</h2>
-                        <p class="contact-form-placeholder">What should I call you?</p>
+                        <label for="name" class="contact-heading">Name</label>
+                        <input class="contact-form-placeholder" type="text" name="name" id="name" placeholder="What should I call you?" />
                     </div>
                 </div>
     
                 <div class="contact-form-group">
                     <div class="contact-form-content">
-                        <h2 class="contact-heading">Email Address</h2>
-                        <p class="contact-form-placeholder">Where should I respond?</p>
+                        <label for="email" class="contact-heading">Email Address</label>
+                        <input class="contact-form-placeholder" type="email" name="email" id="email" placeholder="Where should I respond?" />
                     </div>
                 </div>
 
                 <div class="contact-form-group contact-form-group--large">
                     <div class="contact-form-content">
-                        <h2 class="contact-heading">Message</h2>
-                        <p class="contact-form-placeholder">How can I help you?</p>
+                        <label for="Message" class="contact-heading">Message</label>
+                        <textarea class="contact-form-placeholder" type="text" name="Message" id="Message" placeholder="How can I help you?"></textarea>
                     </div>
                 </div>
 
@@ -104,6 +104,14 @@
             <p class="footer-detail">Designed and Developed by <strong>LukeNguyen</strong> ©2022 </p>
         </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Link to AOS
+        //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
+    
+    </script>
 </body>
 
 </html>

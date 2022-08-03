@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Work</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Koulen&family=Poppins:wght@100;400&display=swap"
         rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/work.css" />
@@ -23,61 +23,62 @@
 <body>
     <div class="wrapper">
         <!-- Global navigation -->
-        <nav class="nav-wrapper">
-            <a class="nav-back-wrapper" href="index.html">
+        <div class="nav-back-wrapper">
+            <a href="index.html">
                 <img class="nav-back-img" srcset="./images/back.png 2x" alt="Back button">
-
+    
                 <img class="nav-back-img-hover" srcset="./images/back-hover-button.png 2x" alt="Back button hover">
             </a>
+        </div>
+        
+        <div class="nav-menu-wrapper">
+            <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
 
-            <div class="nav-menu-wrapper">
-                <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
-
-                <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
+            <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
 
 
-                <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
+            <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
 
-                <div class="nav-menu-container d-none">
-                    <ul class="nav-list">
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/home.png" alt="" class="nav-list-item-logo">
-                            <a href="index.html" class="nav-list-item-link">HOME</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/user.png" alt="" class="nav-list-item-logo">
-                            <a href="about.html" class="nav-list-item-link">ABOUT</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/pen-tool.png" alt="" class="nav-list-item-logo">
-                            <a href="work.html" class="nav-list-item-link">WORK</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/codesandbox.png" alt="" class="nav-list-item-logo">
-                            <a href="contact.html" class="nav-list-item-link">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="nav-menu-container d-none">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/home.png 2x" alt="Icon home" class="nav-list-item-logo">
+                        <a href="index.html" class="nav-list-item-link">HOME</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/user.png 2x" alt="Icon about" class="nav-list-item-logo">
+                        <a href="about.html" class="nav-list-item-link">ABOUT</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/pen-tool.png 2x" alt="Icon work" class="nav-list-item-logo">
+                        <a href="work.html" class="nav-list-item-link">WORK</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/codesandbox.png 2x" alt="Icon contact" class="nav-list-item-logo">
+                        <a href="contact.html" class="nav-list-item-link">CONTACT</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>  
 
         <div class="nav-holder"></div>
 
         <div class="work-header">
             <div class="work-header-wrapper">
-                <img srcset="./images/4.png 2x" alt="" class="work-header-image">
+                <img srcset="./images/4.png 2x" alt="LukeNguyen Image" class="work-header-image">
                 <h1 class="work-header-heading">WORK</h1>
             </div>
 
             <div class="work-header-btn-group">
-                <button class="btn btn-primary active">ALL</button>
-                <button class="btn btn-primary">UX/UI PROJECT</button>
-                <button class="btn btn-primary">SIDE PROJECT</button>
+                <button class="btn btn-primary active" data-project-type="ALL">ALL</button>
+                <button class="btn btn-primary" data-project-type="UX/UI">UX/UI PROJECT</button>
+                <button class="btn btn-primary" data-project-type="SIDE">SIDE PROJECT</button>
             </div>
         </div>
 
         <div class="work-detail-wrapper">
-            <div class="work-detail">
+            <div class="work-detail" data-project-type="UX/UI" data-aos="zoom-in-left" data-aos-duration="2000">
+                <img src="./images/work/Gemini_ProjectCover.png" alt="GEMINI Image" class="work-detail-background-img">
                 <div class="work-detail-content">
                     <h4 class="work-heading">UX/UI PROJECT</h4>
                     <h1 class="work-heading">GEMINI - WEB & APP DESIGN</h1>
@@ -85,7 +86,8 @@
                 </div>
             </div>
 
-            <div class="work-detail ">
+            <div class="work-detail" data-project-type="UX/UI" data-aos="zoom-in-right" data-aos-duration="2000">
+                <img src="./images/work/Safewheel_ProjectCover.png" alt="GEMINI Image" class="work-detail-background-img">
                 <div class="work-detail-content">
                     <h4 class="work-heading white-color">UX PROJECT . Information Architecture</h4>
                     <h1 class="work-heading white-color">SAFEWHEEL - PROJECT BRIEF DEVELOPMENT</h1>
@@ -93,7 +95,8 @@
                 </div>
             </div>
 
-            <div class="work-detail">
+            <div class="work-detail" data-project-type="UX/UI" data-aos="zoom-in-left" data-aos-duration="2000">
+                <img src="./images/work/Saffron_ProjectCover.png" alt="GEMINI Image" class="work-detail-background-img">
                 <div class="work-detail-content">
                     <h4 class="work-heading">UX/UI PROJECT</h4>
                     <h1 class="work-heading">SAFFRONIC - WEB DESIGN</h1>
@@ -101,7 +104,8 @@
                 </div>
             </div>
 
-            <div class="work-detail">
+            <div class="work-detail" data-project-type="UX/UI" data-aos="zoom-in-right" data-aos-duration="2000">
+                <img src="./images/work/DTF_ProjectCover.png" alt="GEMINI Image" class="work-detail-background-img">
                 <div class="work-detail-content">
                     <h4 class="work-heading">UX/UI PROJECT</h4>
                     <h1 class="work-heading">DOWNTOWN MARKET - WEB DESIGN</h1>
@@ -114,6 +118,14 @@
             <p class="footer-detail">Designed and Developed by <strong>LukeNguyen</strong> ©2022 </p>
         </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Link to AOS
+        //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
+    
+    </script>
 </body>
 
 </html>

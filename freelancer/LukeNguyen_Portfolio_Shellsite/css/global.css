@@ -86,6 +86,8 @@ body {
     border: 3px solid #0B1419;
     outline: none;
     box-shadow: 0px 4px 4px 0px #00000040;
+
+    transition: all 0.25s linear;
 }
 
 .btn:hover.btn-primary {
@@ -135,6 +137,8 @@ body {
     justify-content: center;
 
     border-radius: 20px;
+
+    text-align: center;
 }
 
 .footer-detail {
@@ -145,7 +149,7 @@ body {
 }
 
 /* Nav */
-.nav-wrapper {
+/* .nav-wrapper {
     padding: 36px 42px;
     display: flex;
     align-items: center;
@@ -154,10 +158,13 @@ body {
     position: fixed;
     width: 1440px;
     z-index: 5;
-}
+} */
 
 .nav-menu-wrapper {
-  position: relative;
+  position: fixed;
+  top: 39px;
+  right: 10%;
+  z-index: 5;
 }
 
 .nav-menu-img-hover {
@@ -170,6 +177,11 @@ body {
 
 /* Back */
 .nav-back-wrapper {
+  position: fixed !important;
+  top: 39px;
+  left: 10%;
+
+  z-index: 5;
   display: inline-block;
 
   transform: scale(1.2);

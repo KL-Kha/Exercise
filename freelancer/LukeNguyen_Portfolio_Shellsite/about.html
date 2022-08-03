@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Koulen&family=Poppins:wght@100;400&display=swap"
         rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/about.css" />
@@ -21,50 +21,50 @@
 <body>
     <div class="wrapper">
         <!-- Global navigation -->
-        <nav class="nav-wrapper">
-            <a class="nav-back-wrapper" href="index.html">
+        <div class="nav-back-wrapper">
+            <a href="index.html">
                 <img class="nav-back-img" srcset="./images/back.png 2x" alt="Back button">
-
+    
                 <img class="nav-back-img-hover" srcset="./images/back-hover-button.png 2x" alt="Back button hover">
             </a>
+        </div>
+        
+        <div class="nav-menu-wrapper">
+            <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
 
-            <div class="nav-menu-wrapper">
-                <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
-
-                <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
+            <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
 
 
-                <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
+            <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
 
-                <div class="nav-menu-container d-none">
-                    <ul class="nav-list">
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/home.png" alt="" class="nav-list-item-logo">
-                            <a href="index.html" class="nav-list-item-link">HOME</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/user.png" alt="" class="nav-list-item-logo">
-                            <a href="about.html" class="nav-list-item-link">ABOUT</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/pen-tool.png" alt="" class="nav-list-item-logo">
-                            <a href="work.html" class="nav-list-item-link">WORK</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/codesandbox.png" alt="" class="nav-list-item-logo">
-                            <a href="contact.html" class="nav-list-item-link">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="nav-menu-container d-none">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/home.png 2x" alt="Icon home" class="nav-list-item-logo">
+                        <a href="index.html" class="nav-list-item-link">HOME</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/user.png 2x" alt="Icon about" class="nav-list-item-logo">
+                        <a href="about.html" class="nav-list-item-link">ABOUT</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/pen-tool.png 2x" alt="Icon work" class="nav-list-item-logo">
+                        <a href="work.html" class="nav-list-item-link">WORK</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/codesandbox.png 2x" alt="Icon contact" class="nav-list-item-logo">
+                        <a href="contact.html" class="nav-list-item-link">CONTACT</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
 
         <div class="nav-holder"></div>
 
         <div class="about-content">
             <!-- Logo & Social icons -->
-            <div class="about-image-wrapper">
-                <img srcset="./images/LuanS1.png 2x" alt="" class="about-image">
+            <div class="about-image-wrapper" data-aos="fade-right" data-aos-duration="2000">
+                <img srcset="./images/LuanS1.png 2x" alt="About Images LukeNguyen" class="about-image">
                 <img srcset="./images/LuanS-hover.png 2x" class="about-image-hover" alt="hover" />
 
                 <div class="socials-media-wrapper">
@@ -102,11 +102,11 @@
             </div>
 
             <!-- Bio -->
-            <div class="about-detail">
+            <div class="about-detail" data-aos="fade-left" data-aos-duration="2000">
                 <h1 class="about-heading">
                     hi again, i'm luke nguyen
 
-                    <img srcset="./images/wave.png 2x" alt="" class="about-heading-icon">
+                    <img srcset="./images/wave.png 2x" alt="Waving icon" class="about-heading-icon">
                 </h1>
                 <p class="about-detail-content">
                     <strong>i am:</strong>
@@ -147,7 +147,7 @@
         <div class="more-about-content">
             <h2 class="more-about-outside-heading">More About Me</h2>
 
-            <div class="more-about-wrapper">
+            <div class="more-about-wrapper" data-aos="zoom-in" data-aos-duration="2000">
                 <h1 class="more-about-main-heading">
                     💎 top skills
                 </h1>
@@ -228,7 +228,7 @@
         <div class="about-specialize">
             
             <!-- Education -->
-            <div class="specialize-col">
+            <div class="specialize-col" data-aos="fade-up-right" data-aos-duration="2000">
                 <h1 class="specialize-heading">
                     🎓 education
                 </h1>
@@ -253,7 +253,7 @@
             </div>
 
             <!-- Software -->
-            <div class="specialize-col">
+            <div class="specialize-col" data-aos="fade-up-left" data-aos-duration="2000">
                 <h1 class="specialize-heading">
                     💻 software
                 </h1>
@@ -278,6 +278,14 @@
             </div>
         </div>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Link to AOS
+        //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
+    
+    </script>
 </body>
 
 </html>

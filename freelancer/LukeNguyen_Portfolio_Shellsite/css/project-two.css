@@ -14,6 +14,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .heading-wrapper {
@@ -330,6 +331,7 @@
     margin-bottom: 500px;
 
     display: flex;
+    /* flex-wrap: wrap; */
     gap: 0 30px;
 }
 
@@ -411,4 +413,150 @@ ul.slick-dots li.slick-active button {
 
 .mt-60 {
     margin-top: 60px !important;
+}
+
+@media screen and (max-width: 1365px) {
+    .heading-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-overview-wrapper {
+        width: 100%;
+        text-align: center;
+        max-width: none;
+    }
+
+    .process-container p.process-content.process-ideate-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .clear-absolute {
+        display : none;
+    }
+
+    .process-outside-container {
+        height: auto !important;
+    }
+
+    .process-ideate-image-wrapper {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .process-container p.process-content {
+        margin-left: 20px;
+    }
+
+    p.process-content.user-analysis-content {
+        max-width: none !important;
+        display: block;
+        width: 95%;
+        text-align: center;
+    }
+
+    .process-heading, .process-content {
+        text-align: center;
+    }
+
+    .user-analysis-image-wrapper {
+        position: static;
+        display: block;
+
+        margin: 20px auto;
+    }
+
+    .user-analysis-image {
+        margin: auto;
+        display: block;
+    }
+
+    .ideation-left-container {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }   
+
+    .ideation-right-container {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: auto;
+
+        
+        transform: none !important;
+    }
+
+    .ideation-left-container .ideation-concept-map-image-wrapper {
+        height: auto;
+        margin-bottom : 36px;
+        margin-top: 36px;
+    }
+
+    .ideation-left-container .ideation-donation-flowchart-image-wrapper {
+        height: auto;
+        margin-bottom : 36px;
+        margin-top: 36px;
+    }
+
+    .ideation-sitemap-image-wrapper {
+        height: auto;
+        transform: none !important;
+    }
+
+    .wireframe-styling-container {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .process-container:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .sub-header-wrapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .sub-header-item {
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .working-process-list {
+        flex-direction: column;
+        gap: 20px 22px;
+        align-items: center;
+    }
+
+    .process-outside-container {
+        margin: 19px 0;
+    }
+
+    .working-process-wrapper h1.working-process-heading {
+        text-align: center;
+    }
+
+    .process-outside-container .user-tasks-container, .findings-container
+    ,.solutions-container {
+        height: auto !important;
+    }
+
+    .competitive-analysis-carousel.carousel {
+        width: 100%;
+    }
+
+    .competitive-analysis-content {
+        position: static;
+        max-width: none;
+        margin-top: 50px !important;
+    }
 }

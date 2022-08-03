@@ -18,7 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/project-two.css" />
@@ -30,43 +30,43 @@
 <body>
     <div class="wrapper">
         <!-- Global navigation -->
-        <nav class="nav-wrapper">
-            <a class="nav-back-wrapper" href="index.html">
+        <div class="nav-back-wrapper">
+            <a href="index.html">
                 <img class="nav-back-img" srcset="./images/back.png 2x" alt="Back button">
-
+    
                 <img class="nav-back-img-hover" srcset="./images/back-hover-button.png 2x" alt="Back button hover">
             </a>
+        </div>
+        
+        <div class="nav-menu-wrapper">
+            <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
 
-            <div class="nav-menu-wrapper">
-                <img class="nav-menu-img" srcset="./images/nav-mobile.png 2x" alt="Nav menu icon">
-
-                <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
+            <img class="nav-menu-img-hover" srcset="./images/nav-mobile-hover.png 2x" alt="Nav menu hover icon">
 
 
-                <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
+            <img class="nav-close-img-hover d-none" srcset="./images/close-menu.png 2x" alt="Nav menu close icon">
 
-                <div class="nav-menu-container d-none">
-                    <ul class="nav-list">
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/home.png" alt="" class="nav-list-item-logo">
-                            <a href="index.html" class="nav-list-item-link">HOME</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/user.png" alt="" class="nav-list-item-logo">
-                            <a href="about.html" class="nav-list-item-link">ABOUT</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/pen-tool.png" alt="" class="nav-list-item-logo">
-                            <a href="work.html" class="nav-list-item-link">WORK</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <img src="./images/Vector/codesandbox.png" alt="" class="nav-list-item-logo">
-                            <a href="contact.html" class="nav-list-item-link">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="nav-menu-container d-none">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/home.png 2x" alt="Icon home" class="nav-list-item-logo">
+                        <a href="index.html" class="nav-list-item-link">HOME</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/user.png 2x" alt="Icon about" class="nav-list-item-logo">
+                        <a href="about.html" class="nav-list-item-link">ABOUT</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/pen-tool.png 2x" alt="Icon work" class="nav-list-item-logo">
+                        <a href="work.html" class="nav-list-item-link">WORK</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/codesandbox.png 2x" alt="Icon contact" class="nav-list-item-logo">
+                        <a href="contact.html" class="nav-list-item-link">CONTACT</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
 
         <div class="nav-holder"></div>
 
@@ -116,7 +116,7 @@
             </div>
 
             <div class="sub-header-image-wrapper">
-                <img src="./images/Safewheel/cover.png" alt="" class="sub-header-image">
+                <img src="./images/Safewheel/cover.png" alt="Safewhell Project Image" class="sub-header-image">
                 <a href="https://drive.google.com/file/d/1tXqXQkaOtJA50v3c5_eMGjktiKf-x1dZ/view?usp=sharing"
                     target="_blank" class="btn btn-primary sub-header-image-btn">Download final report</a>
             </div>
@@ -179,7 +179,7 @@
                     </p>
 
                     <div class="user-analysis-image-wrapper">
-                        <img srcset="./images/Safewheel/1.png 2x" alt="" class="user-analysis-image">
+                        <img srcset="./images/Safewheel/1.png 2x" alt="Safewheel Project Image" class="user-analysis-image">
                     </div>
                 </div>
 
@@ -208,7 +208,7 @@
                             <div class="baseline-reports-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel1/1.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel1/1.png" alt="" class="baseline-reports-image">
+                                    <img src="./images/Safewheel/carousel1/1.png" alt="Safewheel Carousell Image" class="baseline-reports-image">
                                 </figure>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                             <div class="baseline-reports-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel1/2.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel1/2.png" alt="" class="baseline-reports-image">
+                                    <img src="./images/Safewheel/carousel1/2.png" alt="Safewheel Carousell Image" class="baseline-reports-image">
                                 </figure>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
                             <div class="baseline-reports-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel1/3.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel1/3.png" alt="" class="baseline-reports-image">
+                                    <img src="./images/Safewheel/carousel1/3.png" alt="Safewheel Carousell Image" class="baseline-reports-image">
                                 </figure>
                             </div>
                         </div>
@@ -235,7 +235,7 @@
                             <div class="baseline-reports-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel1/4.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel1/4.png" alt="" class="baseline-reports-image">
+                                    <img src="./images/Safewheel/carousel1/4.png" alt="Safewheel Carousell Image" class="baseline-reports-image">
                                 </figure>
                             </div>
                         </div>
@@ -245,7 +245,7 @@
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel1/5.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
                                 </figure>
-                                <img src="./images/Safewheel/carousel1/5.png" alt="" class="baseline-reports-image">
+                                <img src="./images/Safewheel/carousel1/5.png" alt="Safewheel Carousell Image" class="baseline-reports-image">
                             </div>
                         </div>
 
@@ -253,7 +253,7 @@
                             <div class="baseline-reports-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel1/6.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel1/6.png" alt="" class="baseline-reports-image">
+                                    <img src="./images/Safewheel/carousel1/6.png" alt="Safewheel Carousell Image" class="baseline-reports-image">
                                 </figure>
                             </div>
                         </div>
@@ -262,7 +262,7 @@
                             <div class="baseline-reports-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel1/7.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel1/7.png" alt="" class="baseline-reports-image">
+                                    <img src="./images/Safewheel/carousel1/7.png" alt="Safewheel Carousell Image" class="baseline-reports-image">
                                 </figure>
                             </div>
                         </div>
@@ -286,7 +286,7 @@
                             <div class="competitive-analysis-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel2/1.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel2/1.png" alt=""
+                                    <img src="./images/Safewheel/carousel2/1.png" alt="Safewheel Carousell Image"
                                         class="competitive-analysis-image">
                                 </figure>
                             </div>
@@ -296,7 +296,7 @@
                             <div class="competitive-analysis-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel2/2.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel2/2.png" alt=""
+                                    <img src="./images/Safewheel/carousel2/2.png" alt="Safewheel Carousell Image"
                                         class="competitive-analysis-image">
                                 </figure>
                             </div>
@@ -306,7 +306,7 @@
                             <div class="competitive-analysis-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel2/3.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel2/3.png" alt=""
+                                    <img src="./images/Safewheel/carousel2/3.png" alt="Safewheel Carousell Image"
                                         class="competitive-analysis-image">
                                 </figure>
                             </div>
@@ -316,7 +316,7 @@
                             <div class="competitive-analysis-image-wrapper">
                                 <figure class="zoom" style="background:url(./images/Safewheel/carousel2/4.png)"
                                     onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="./images/Safewheel/carousel2/4.png" alt=""
+                                    <img src="./images/Safewheel/carousel2/4.png" alt="Safewheel Carousell Image"
                                         class="competitive-analysis-image">
                                 </figure>
                             </div>
@@ -365,14 +365,14 @@
                         <div class="ideation-concept-map-image-wrapper">
                             <figure class="zoom" style="background:url(./images/Safewheel/2.png)"
                                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                <img src="./images/Safewheel/2.png" alt="" class="ideation-concept-map-image">
+                                <img src="./images/Safewheel/2.png" alt="Safewheel Carousell Image" class="ideation-concept-map-image">
                             </figure>
                         </div>
 
                         <div class="ideation-donation-flowchart-image-wrapper">
                             <figure class="zoom" style="background:url(./images/Safewheel/3.png)"
                                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                <img src="./images/Safewheel/3.png" alt="" class="ideation-concept-map-image">
+                                <img src="./images/Safewheel/3.png" alt="Safewheel Carousell Image" class="ideation-concept-map-image">
                             </figure>
                         </div>
                     </div>
@@ -381,7 +381,7 @@
                         <div class="ideation-sitemap-image-wrapper">
                             <figure class="zoom" style="background:url(./images/Safewheel/4.png)"
                                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                <img src="./images/Safewheel/4.png" alt="" class="ideation-concept-map-image">
+                                <img src="./images/Safewheel/4.png" alt="Safewheel Carousell Image" class="ideation-concept-map-image">
                             </figure>
                         </div>
 
@@ -415,13 +415,13 @@
                         <div class="wireframe-styling-image-wrapper">
                             <figure class="zoom" style="background:url(./images/Safewheel/5.png)"
                                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                <img src="./images/Safewheel/5.png" alt="" class="wireframe-styling-image">
+                                <img src="./images/Safewheel/5.png" alt="Safewheel Carousell Image" class="wireframe-styling-image">
                             </figure>
                         </div>
                         <div class="wireframe-styling-image-wrapper">
                             <figure class="zoom" style="background:url(./images/Safewheel/6.png)"
                                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                <img src="./images/Safewheel/6.png" alt="" class="wireframe-styling-image">
+                                <img src="./images/Safewheel/6.png" alt="Safewheel Carousell Image" class="wireframe-styling-image">
                             </figure>
                         </div>
                     </div>
@@ -474,6 +474,14 @@
                 nextArrow: "<button type='button' class='slick-next pull-right slick-button-custom'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
             });
         });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Link to AOS
+        //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
+
     </script>
 </body>
 

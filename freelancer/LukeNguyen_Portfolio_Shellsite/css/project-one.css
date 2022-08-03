@@ -14,6 +14,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .heading-wrapper {
@@ -527,4 +528,76 @@
     margin-top: -91px;
 
     padding: 182px 26px 26px 26px;
+}
+
+@media screen and (max-width: 1365px) {
+    .heading-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-overview-wrapper {
+        width: 100%;
+        text-align: center;
+        max-width: none;
+    }
+
+    .process-container p.process-content.process-ideate-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .clear-absolute {
+        display : none;
+    }
+
+    .process-ideate-image-wrapper {
+        position: static;
+        margin-top: 20px;
+    }
+
+    
+
+    .process-container p.process-content {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .sub-header-wrapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .sub-header-item {
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .design-process-list {
+        flex-direction: column;
+        gap: 20px 22px;
+        align-items: center;
+    }
+
+    .process-outside-container {
+        margin: 19px 0;
+        min-height: 513px;
+    }
+
+    .process-outside-container .user-tasks-container, .findings-container
+    ,.solutions-container {
+        height: auto !important;
+    }
+
+    .yellow-container-footer {
+        padding: 48px 26px 26px 26px;
+        height: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
