@@ -1,9 +1,6 @@
-.wrapper {
-    padding: 0;
-}
-
 .about-content {
-    padding: 0 146px;
+    max-height: 1388px;
+    margin: 0 auto;
     display: flex;
 }
 
@@ -12,7 +9,6 @@
     display: inline-block;
     position: relative;
 }
-
 
 .about-image {
     margin-bottom: 14px;
@@ -47,10 +43,6 @@
     display: inline-block;
 }
 
-.social-medial-image {
-
-}
-
 .social-medial-image-hover {
     position: absolute;
     top: 0;
@@ -76,14 +68,13 @@
 .about-detail h1.about-heading {
     display: flex;
     align-items: center;
-    transform: translate(-16%, -16%);
+    transform: translate(-10%, -16%);
 
     /* BIG-HEAD */
     font-family: 'Koulen';
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
-    line-height: 108px;
     text-transform: capitalize;
 
     color: #000000;
@@ -91,7 +82,6 @@
 
 .about-heading-icon {
     margin-left: 10px;
-
 }
 
 .about-heading-icon:hover {
@@ -114,67 +104,55 @@
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+}
 
 .about-detail-content {
     margin-top: 0px;
 
-    /* h2 */
     font-family: 'Poppins', 'Koulen';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
-    /* or 30px */
 
     color: #000000;
 }
 
 .about-detail-content strong{
-    /* h2 */
     font-family: 'Koulen';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 100%;
-    /* or 30px */
 
     color: #000000;
 }
 
 /* More About Me */
 .more-about-content {
+    margin: 0 auto;
     margin-top: 38px;
-    padding: 0 168px;
+    max-width: 1100px;
 }
 
 h2.more-about-outside-heading {
     margin-bottom: 10px;
-    /* h2 */
+
     font-family: 'Koulen';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    line-height: 100%;
-    /* identical to box height, or 30px */
 
     text-transform: capitalize;
-
     color: #000000;
-
 }
 
 h1.more-about-main-heading {
     padding: 30px 36px;
-    /* BIG-HEAD */
 
     font-family: 'Koulen';
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
-    line-height: 108px;
     text-transform: capitalize;
-
     color: #000000;
 }
 
@@ -190,13 +168,10 @@ h1.more-about-main-heading {
     padding: 0 121px;
     margin-bottom: 38px;
     
-
-    /* paragraph */
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
 
     color: #000000;
 }
@@ -214,8 +189,9 @@ h1.more-about-main-heading {
 .about-specialize {
     display: flex;
     justify-content: space-between;
-    padding: 0 168px;
-    padding-bottom: 57px;
+
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .specialize-col {
@@ -247,7 +223,6 @@ h1.more-about-main-heading {
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 43px;
     text-transform: capitalize;
     
     color: #000000;
@@ -258,7 +233,6 @@ h1.more-about-main-heading {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
     text-transform: capitalize;
     
     color: #000000;
@@ -269,7 +243,6 @@ h1.more-about-main-heading {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 24px;
 
     text-transform: none;
     font-style: italic;
@@ -278,18 +251,16 @@ h1.more-about-main-heading {
 }
 
 
-
-
 /* Responsive */
 @media only screen and (max-width: 1413px) {
     .about-content {
-        display: flex;
         flex-direction: column;
-
     }
+
     .about-image-wrapper {
         margin: 0 auto;
     }
+
     .socials-media-wrapper {
         flex-direction: row;
     }
@@ -326,12 +297,47 @@ h1.more-about-main-heading {
     .more-about-main-content {
         flex-wrap: wrap;
     }
+
+      
 }
-
-
 
 @media only screen and (max-width: 935px){
     .col-three {
-        border-bottom: 5px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .specialize-item {
+        margin-bottom: 10px;
+        border-bottom: 2px solid #000000;
+    }
+
+    .about-content {
+        max-height: none;
+    }
+
+    .more-about-main-content {
+        padding: 0 50px;
+    }
+
+    .specialize-col .specialize-list {
+        list-style: none;
+        padding: 0px 36px 32px 50px;
     }
 }
+
+@media only screen and (max-width: 700px){
+    .about-detail h1.about-heading {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1.more-about-main-heading {
+        font-size: 40px;
+    }
+
+    .specialize-col h1.specialize-heading {
+        font-size: 40px;
+    }
+}
+
