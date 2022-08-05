@@ -1,250 +1,13 @@
-.wrapper {
-    padding: 0;
-    padding-bottom: 26px;
-    background-color: #FBFAFA;;
-}
-
-.container {
-    padding: 0 136px;
-    margin: 0;
-    width: 100%;
-}
-
-.header-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.heading-wrapper {
-    width: 546px;
-}
-
-.heading-wrapper h1.heading {
-    font-family: 'Koulen';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 90px;
-    line-height: 95%;
-    /* or 85px */
-
-    text-transform: capitalize;
-}
-
-
 .heading-wrapper h1.heading.heading-primary {
-    /* #F9DE5A */
-    color: #E76E3C;
+  color: #E76E3C;
 }
 
-.heading-wrapper h1.heading.heading-secondary {
-    color: #000000;
-}
-
-.project-overview-wrapper {
-    text-align: right;
-    max-width: 533px;
-}
-
-.project-overview-wrapper h2.project-overview-heading {
-    /* paragraph */
-
-    font-family: 'Koulen';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 65px;
-    text-transform: capitalize;
-
-    color: #000000;
-}
-
-.project-overview-wrapper p.project-overview-content {
-    /* paragraph */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    color: #000000;
-}
-
-/*  */
-
-.sub-header-wrapper {
-    margin-top: 35px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.sub-header-item h2.sub-header-heading {
-    font-family: 'Koulen';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 43px;
-    text-transform: capitalize;
-
-    color: #000000;
-}
-
-.sub-header-item p.sub-header-content {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    color: #000000;
-}
-
-.sub-header-wrapper .sub-header-item {
-    text-align: center;
-}
-
-.sub-header-wrapper .sub-header-item:first-child {
-    text-align: left;
-}
-
-.sub-header-wrapper .sub-header-item:last-child {
-    text-align: right;
-}
-
-/* fix center */
-.sub-header-wrapper .sub-header-item:nth-child(2) {
-    margin-right: -180px;
-}
-
-/*  */
-
-.sub-header-image-wrapper {
-    margin-top: 27px;
-    text-align: right;
-}
-
-.sub-header-image {
-    border-radius: 20px;
-    margin-bottom: 16px;
-}
-
-.sub-header-image-btn {
-    /* SUB-HEAD */
-    font-family: 'Koulen';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 22px;
-    /* identical to box height */
-
-    text-align: center;
-    text-transform: capitalize;
-
-    /* #0B1419 */
-
-    color: #0B1419;
-}
-
-/*  */
-
-.working-process-wrapper {
-    margin-top: 50px;
-    margin-bottom: 66px;
-}
-
-.working-process-wrapper h1.working-process-heading {
-    /* h1 */
-    font-family: 'Koulen';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 90px;
-    text-transform: capitalize;
-
-    color: #000000;
-
-    margin-bottom: 9px;
-}
-
-.working-process-list {
-    display: flex;
-    list-style: none;
-    gap: 0 22px;
-}
-
-.working-process-list li.working-process-item {
-    width: 216px;
-    height: 216px;  
-    
-    background-color: #8D8E89;
-    border-radius: 100%;
-
-    font-family: 'Poppins';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 100%;
-    /* or 25px */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    /* #F9DE5A */
-
-    color: #F9DE5A;
-
-    transition: transform 0.25s ease;
-}
-
-.working-process-list li.working-process-item:hover {
+.process-flex-layout-list li.process-flex-layout-item:hover {
     cursor: default;
     transform: scale(0.9);
 
     background-color: #E76E3C;
-    /* color: #8D8E89; */
-}
-
-.process-container {
-    margin-bottom: 91px;
-    position: relative;
-    
-}
-
-.process-container h1.process-heading {
-    font-family: 'Koulen';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 90px;
-    line-height: 163px;
-    /* identical to box height */
-
-    text-transform: capitalize;
-
-    color: #000000;
-}
-
-.process-container p.process-content {
-    /* paragraph */
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    color: #000000;
-
-    margin-left: 130px;
-    margin-top: -24px;
-}
-
-.process-outside-container {
-    display: flex;
-    margin: 19px -136px;
-    height: 513px;
+    color: currentColor;
 }
 
 /* User analysis */
@@ -416,28 +179,9 @@ ul.slick-dots li.slick-active button {
 }
 
 @media screen and (max-width: 1365px) {
-    .heading-wrapper {
-        width: 100%;
-        text-align: center;
-    }
-
-    .project-overview-wrapper {
-        width: 100%;
-        text-align: center;
-        max-width: none;
-    }
-
     .process-container p.process-content.process-ideate-content {
         width: 100%;
         max-width: none;
-    }
-
-    .clear-absolute {
-        display : none;
-    }
-
-    .process-outside-container {
-        height: auto !important;
     }
 
     .process-ideate-image-wrapper {
@@ -445,18 +189,10 @@ ul.slick-dots li.slick-active button {
         margin-top: 20px;
     }
 
-    .process-container p.process-content {
-        margin-left: 20px;
-    }
-
     p.process-content.user-analysis-content {
         max-width: none !important;
         display: block;
         width: 95%;
-        text-align: center;
-    }
-
-    .process-heading, .process-content {
         text-align: center;
     }
 
@@ -517,32 +253,8 @@ ul.slick-dots li.slick-active button {
 }
 
 @media screen and (max-width: 1140px) {
-    .container {
-        padding: 0 10px;
-    }
-    
-    .sub-header-wrapper {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    .sub-header-item {
-        margin: 0 !important;
-        text-align: center !important;
-    }
-
-    .working-process-list {
-        flex-direction: column;
-        gap: 20px 22px;
-        align-items: center;
-    }
-
     .process-outside-container {
         margin: 19px 0;
-    }
-
-    .working-process-wrapper h1.working-process-heading {
-        text-align: center;
     }
 
     .process-outside-container .user-tasks-container, .findings-container
@@ -558,5 +270,21 @@ ul.slick-dots li.slick-active button {
         position: static;
         max-width: none;
         margin-top: 50px !important;
+    }
+
+    .carousel {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .process-container h1.process-heading {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+
+    .wireframe-styling-container {
+        padding: 0;
     }
 }

@@ -1,0 +1,16 @@
+.heading-wrapper h1.heading.heading-primary {
+  color: #FFC71F;
+}
+
+.process-flex-layout-list li.process-flex-layout-item:hover {
+  cursor: default;
+  transform: scale(0.9);
+
+  background-color: #FFC71F;
+  color: currentColor;
+}
+
+.process-flex-layout-list {
+  justify-content: center;
+  align-items: center;
+}
