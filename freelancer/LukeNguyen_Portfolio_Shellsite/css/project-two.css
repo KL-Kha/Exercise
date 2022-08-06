@@ -12,7 +12,7 @@
 
 /* User analysis */
 .process-container p.process-content.user-analysis-content {
-    max-width: 575px;
+    max-width: 500px;
 }
 
 .user-analysis-image-wrapper {
@@ -91,7 +91,6 @@
 /* Wireframe and Styling  */
 .wireframe-styling-container {
     padding: 23px 78px 91px 78px;
-    margin-bottom: 500px;
 
     display: flex;
     /* flex-wrap: wrap; */
@@ -244,11 +243,15 @@ ul.slick-dots li.slick-active button {
 
     .wireframe-styling-container {
         flex-wrap: wrap;
-        margin-bottom: 0;
+        /* margin-bottom: 0; */
     }
 
     .process-container:last-child {
         margin-bottom: 0;
+    }
+
+    .process-outside-container {
+        height: auto;
     }
 }
 

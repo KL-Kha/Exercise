@@ -155,4 +155,8 @@ textarea.contact-form-placeholder {
   .contact-form-group {
     padding: 16px 24px;
   }
+
+  .btn.btn-primary.contact-form-button {
+    padding: 16px 0;
+  }
 }

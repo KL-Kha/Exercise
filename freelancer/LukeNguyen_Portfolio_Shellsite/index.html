@@ -5,12 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page - Grid</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Koulen&family=Poppins:wght@100;400&display=swap"
-        rel="stylesheet">
+    <title>Home Page</title>
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/global.css" />
@@ -19,12 +15,38 @@
 
 <body>
     <div class="wrapper">
-        <div class="d-flex-align-start">
+        <div class="grid-layout">
             <div class="logo-wrapper" data-aos="fade-right" data-aos-duration="3000">
                 <!-- Logo  -->
                 <img src="./images/logo_layer1.png" alt="Logo LukeNguyen" id="logo">
                 <img src="./images/logo_layer2.png" alt="Logo LukeNguyen" id="logo-layer">
             </div>
+
+            <!-- Vertical Navigation  -->
+            <nav class="nav-page" data-aos="fade-left" data-aos-duration="2000">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/home.png 2x" alt="Icon home" class="nav-list-item-logo">
+                        <a href="index.html" class="nav-list-item-link border-anim-left-to-right">HOME</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/user.png 2x" alt="Icon about" class="nav-list-item-logo">
+                        <a href="about.html" class="nav-list-item-link border-anim-left-to-right">ABOUT</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/pen-tool.png 2x" alt="Icon work" class="nav-list-item-logo">
+                        <a href="work.html" class="nav-list-item-link border-anim-left-to-right">WORK</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <img srcset="./images/Vector/codesandbox.png 2x" alt="Icon contact" class="nav-list-item-logo">
+                        <a href="contact.html" class="nav-list-item-link border-anim-left-to-right">CONTACT</a>
+                    </li>
+                </ul>
+
+                <!-- Graphic -->
+                <img src="./images/Eye Glasses.png" alt="Icon Eye Glasses" class="nav-list-image position-1" />
+                <img src="./images/Eye Glasses (1).png" alt="Icon Eye Glasses" class="nav-list-image position-2" />
+            </nav>
 
             <!-- Introduction -->
             <div class="introduce" data-aos="fade-down" data-aos-duration="2000">
@@ -36,113 +58,91 @@
                     WITH A BACKGROUND OF <span class="primary-color">PROJECT MANAGEMENT</span> IN MARKETING &
                     COMMUNICATION FIELD FOR OVER 5 YEARS</p>
 
-                <a target="_blank" href="https://drive.google.com/file/d/1Pg1sLLJUJg67biheBFNqgJa5ILjmrQ9O/view?usp=sharing"
+                <a href="https://drive.google.com/file/d/1Pg1sLLJUJg67biheBFNqgJa5ILjmrQ9O/view?usp=sharing"
                     class="btn btn-primary download-cv">
                     <img src="./images/Vector/Frame.png" alt="Download CV PDF" class="btn-download-cv-image">
                     <span>DOWNLOAD MY RESUME</span>
                 </a>
             </div>
 
-            <!-- Vertical Navigation  -->
-            <nav class="nav-page" data-aos="fade-left" data-aos-duration="2000">
-                <ul class="nav-list">
-                    <li class="nav-list-item">
-                        <img srcset="./images/Vector/home.png 2x" alt="Icon Home" class="nav-list-item-logo">
-                        <a href="index.html" class="nav-list-item-link">HOME</a>
+            <!-- Left Container - featuring project 1 -->
+            <div class="left-container" data-aos="fade-up-right" data-aos-duration="2000">
+                <div class="left-container-content-position container-content">
+                    <h4 class="container-heading">ux/ui project</h4>
+                    <h1 class="container-heading">GEMINI - WEB & APP DESIGN</h1>
+                    <a href="./project-one.html" class="btn btn-primary container-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Right Container - featuring Side projects -->
+            <div class="right-container" data-aos="fade-up-left" data-aos-duration="2000">
+                <div class="right-container-content-position container-content">
+                    <h4 class="container-heading">side project</h4>
+                    <h1 class="container-heading">branding design</h1>
+                    <a href="./project-three.html" class="btn btn-primary container-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Center Container - Contact box -->
+            <div class="contact-container" data-aos="zoom-in-up" data-aos-duration="3000">
+                <h1 class="contact-heading">contact me</h1>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <a href="https://www.behance.net/luannguyen70" target="_blank" class="contact-item-link">
+                            <img srcset="./images/social-media/be.png 2x" alt="Logo" class="contact-item-image">
+                            <img srcset="./images/social-media/behance-hover.png 2x" alt="Logo"
+                                class="contact-item-image-hover">
+                        </a>
                     </li>
-                    <li class="nav-list-item">
-                        <img srcset="./images/Vector/user.png 2x" alt="Icon About" class="nav-list-item-logo">
-                        <a href="about.html" class="nav-list-item-link">ABOUT</a>
+
+                    <li class="contact-item">
+                        <a href="https://www.facebook.com/profile.php?id=100078343945782" target="_blank"
+                            class="contact-item-link">
+                            <img srcset="./images/social-media/facebook.png 2x" alt="Logo" class="contact-item-image">
+                            <img srcset="./images/social-media/facebook-hover.png 2x" alt="Logo"
+                                class="contact-item-image-hover">
+                        </a>
                     </li>
-                    <li class="nav-list-item">
-                        <img srcset="./images/Vector/pen-tool.png 2x" alt="Icon Work" class="nav-list-item-logo">
-                        <a href="work.html" class="nav-list-item-link">WORK</a>
+
+                    <li class="contact-item">
+                        <a href="mailto: thanhluan126@gmail.com" class="contact-item-link">
+                            <img srcset="./images/social-media/google.png 2x" alt="Logo" class="contact-item-image">
+                            <img srcset="./images/social-media/google-hover.png 2x" alt="Logo"
+                                class="contact-item-image-hover">
+                        </a>
                     </li>
-                    <li class="nav-list-item">
-                        <img srcset="./images/Vector/codesandbox.png 2x" alt="Icon Contact" class="nav-list-item-logo">
-                        <a href="contact.html" class="nav-list-item-link">CONTACT</a>
+
+                    <li class="contact-item">
+                        <a href="https://www.instagram.com/luke.ng126/" target="_blank" class="contact-item-link">
+                            <img srcset="./images/social-media/camera.png 2x" alt="Logo" class="contact-item-image">
+                            <img srcset="./images/social-media/instagram-hover.png 2x" alt="Logo"
+                                class="contact-item-image-hover">
+                        </a>
+                    </li>
+
+                    <li class="contact-item">
+                        <a href="https://www.youtube.com/channel/UCb4X68M5zIzO6WylXFhW4mA" target="_blank"
+                            class="contact-item-link">
+                            <img srcset="./images/social-media/youtube.png 2x" alt="Logo" class="contact-item-image">
+                            <img srcset="./images/social-media/youtube-hover.png 2x" alt="Logo"
+                                class="contact-item-image-hover">
+                        </a>
+                    </li>
+
+                    <li class="contact-item">
+                        <a href="https://www.linkedin.com/in/luke-nguyen-0383a16b" target="_blank"
+                            class="contact-item-link">
+                            <img srcset="./images/social-media/in.png 2x" alt="Logo" class="contact-item-image">
+                            <img srcset="./images/social-media/linkein-hover.png 2x" alt="Logo"
+                                class="contact-item-image-hover">
+                        </a>
                     </li>
                 </ul>
-
-                <!-- Graphic -->
-                <img src="./images/Eye Glasses.png" alt="Eye Glasses Icon 1" class="nav-list-image position-1" />
-                <img src="./images/Eye Glasses (1).png" alt="Eye Glasses Icon 2" class="nav-list-image position-2" />
-            </nav>
-        </div>
-
-        <!-- add to fill gap between each containers because of absolute position-->
-        <div class="empty"></div>
-
-        <!-- Left Container - featuring project 1 -->
-        <div class="left-container" data-aos="fade-up-right" data-aos-duration="2000">
-            <div class="left-container-content-position container-content">
-                <h4 class="container-heading">ux/ui project</h4>
-                <h1 class="container-heading">GEMINI - WEB & APP DESIGN</h1>
-                <a href="./project-one.html" class="btn btn-primary container-btn">View Project</a>
             </div>
+
         </div>
 
-        <!-- Center Container - Contact box -->
-        <div class="contact-container" data-aos="zoom-in-up" data-aos-duration="3000">
-            <h1 class="contact-heading">contact me</h1>
-            <ul class="contact-list">
-                <li class="contact-item">
-                    <a href="https://www.behance.net/luannguyen70" target="_blank" class="contact-item-link">
-                        <img srcset="./images/social-media/be.png 2x" alt="Logo" class="contact-item-image">
-                        <img srcset="./images/social-media/behance-hover.png 2x" alt="Logo" class="contact-item-image-hover">
-                    </a>
-                </li>
-
-                <li class="contact-item">
-                    <a href="https://www.facebook.com/profile.php?id=100078343945782" target="_blank"
-                        class="contact-item-link">
-                        <img srcset="./images/social-media/facebook.png 2x" alt="Logo" class="contact-item-image">
-                        <img srcset="./images/social-media/facebook-hover.png 2x" alt="Logo" class="contact-item-image-hover">
-                    </a>
-                </li>
-
-                <li class="contact-item">
-                    <a href="mailto: thanhluan126@gmail.com" class="contact-item-link">
-                        <img srcset="./images/social-media/google.png 2x" alt="Logo" class="contact-item-image">
-                        <img srcset="./images/social-media/google-hover.png 2x" alt="Logo" class="contact-item-image-hover">
-                    </a>
-                </li>
-
-                <li class="contact-item">
-                    <a href="https://www.instagram.com/luke.ng126/" target="_blank" class="contact-item-link">
-                        <img srcset="./images/social-media/camera.png 2x" alt="Logo" class="contact-item-image">
-                        <img srcset="./images/social-media/instagram-hover.png 2x" alt="Logo" class="contact-item-image-hover">
-                    </a>
-                </li>
-
-                <li class="contact-item">
-                    <a href="https://www.youtube.com/channel/UCb4X68M5zIzO6WylXFhW4mA" target="_blank"
-                        class="contact-item-link">
-                        <img srcset="./images/social-media/youtube.png 2x" alt="Logo" class="contact-item-image">
-                        <img srcset="./images/social-media/youtube-hover.png 2x" alt="Logo" class="contact-item-image-hover">
-                    </a>
-                </li>
-
-                <li class="contact-item">
-                    <a href="https://www.linkedin.com/in/luke-nguyen-0383a16b" target="_blank"
-                        class="contact-item-link">
-                        <img srcset="./images/social-media/in.png 2x" alt="Logo" class="contact-item-image">
-                        <img srcset="./images/social-media/linkein-hover.png 2x" alt="Logo" class="contact-item-image-hover">
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Right Container - featuring Side projects -->
-        <div class="right-container" data-aos="fade-up-left" data-aos-duration="2000">
-            <div class="right-container-content-position container-content">
-                <h4 class="container-heading">side project</h4>
-                <h1 class="container-heading">branding design</h1>
-                <a href="#" class="btn btn-primary container-btn">Comming Soon</a>
-            </div>
-        </div>
-
-        <footer class="footer" data-aos="fade-up" data-aos-duration="3000">
+        <footer class="footer" >
             <p class="footer-detail">Designed and Developed by <strong>LukeNguyen</strong> ©2022 </p>
         </footer>
     </div>
@@ -152,7 +152,7 @@
         AOS.init();
         // Link to AOS
         //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
-    
+
     </script>
 
 </body>

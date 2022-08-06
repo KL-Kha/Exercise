@@ -14,6 +14,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/project-common.css" />
     <link rel="stylesheet" href="./css/project-one.css" />
     <link rel="stylesheet" href="./css/zoom.css" />
@@ -154,7 +155,7 @@
           <img
             srcset="./images/project-one/rec1.png 2x"
             alt="Project Prototype image"
-            class="sub-header-image"
+            class="sub-header-image modal-popup-able"
           />
           <a
             href="https://xd.adobe.com/view/8e023e5a-2bb7-4600-841b-d214da2d7251-db51/screen/9b1f8dca-12c5-4894-a9c9-ff0a3178ca9d/"
@@ -199,7 +200,7 @@
               <img
                 srcset="./images/project-one/research.png 2x"
                 alt="Research images"
-                class="user-analysis-img"
+                class="user-analysis-img modal-popup-able"
               />
             </div>
           </div>
@@ -220,7 +221,7 @@
               <img
                 src="./images/project-one/user-analysis/1.png"
                 alt="User analysis image"
-                class="user-analysis-img"
+                class="user-analysis-img modal-popup-able"
               />
             </div>
           </div>
@@ -248,7 +249,7 @@
               <img
                 srcset="./images/project-one/Flowchart1.png 2x"
                 alt="Flowchart Image"
-                class="process-ideate-image"
+                class="process-ideate-image modal-popup-able"
               />
             </div>
           </div>
@@ -278,7 +279,7 @@
                 <img
                   src="./images/project-one/prototype/3.png"
                   alt="Prototype image"
-                  class="prototype-img"
+                  class="prototype-img modal-popup-able"
                 />
               </figure>
             </div>
@@ -302,7 +303,7 @@
                 <img
                   src="./images/project-one/prototype/4.png"
                   alt="Prototype image"
-                  class="prototype-img"
+                  class="prototype-img modal-popup-able"
                 />
               </figure>
             </div>
@@ -319,7 +320,7 @@
                 <img
                   src="./images/project-one/prototype/5.png"
                   alt="Prototype image"
-                  class="prototype-img"
+                  class="prototype-img modal-popup-able"
                 />
               </figure>
             </div>
@@ -347,7 +348,7 @@
                 <img
                   src="./images/project-one/understand/6.png"
                   alt="Understand image"
-                  class="understand-img"
+                  class="understand-img modal-popup-able"
                 />
               </div>
 
@@ -355,7 +356,7 @@
                 <img
                   src="./images/project-one/understand/7.png"
                   alt="Understand image"
-                  class="understand-img"
+                  class="understand-img modal-popup-able"
                 />
               </div>
 
@@ -363,7 +364,7 @@
                 <img
                   src="./images/project-one/understand/8.png"
                   alt="Understand image"
-                  class="understand-img"
+                  class="understand-img modal-popup-able"
                 />
               </div>
             </div>
@@ -373,14 +374,29 @@
 
       <div class="yellow-container-footer">
         <a href="contact.html" class="let-work-together-wrapper">
-          <h1 class="let-work-together-heading">let’s wORK together 💬</h1>
+          <h1 class="let-work-together-heading">let's wORK together 💬</h1>
         </a>
 
-        <footer class="footer" data-aos="fade-up" data-aos-duration="3000">
+        <footer class="footer">
           <p class="footer-detail">
             Designed and Developed by <strong>LukeNguyen</strong> ©2022
           </p>
         </footer>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="image-popup-modal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <div class="modal-image-wrapper">
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
       </div>
     </div>
 
@@ -401,5 +417,7 @@
       // Link to AOS
       //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
     </script>
+    <script src="./scripts/modal.js"></script>
+
   </body>
 </html>

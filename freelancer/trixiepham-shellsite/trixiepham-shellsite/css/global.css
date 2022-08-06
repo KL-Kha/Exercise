@@ -1,0 +1,263 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--white-color);
+
+  position: relative;
+}
+
+main {
+  /* Fixed header height  */
+  padding-top: 84px;
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  padding: 8px 18px;
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+  border-radius: 7px;
+
+  transition: all 0.25s linear;
+}
+
+.btn:hover.btn--primary,
+.btn:hover.btn--primary a {
+  color: var(--primary-fader-color);
+  background-color: var(--black-color);
+}
+
+.btn.btn--primary {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+
+  /* identical to box height */
+  color: var(--black-color);
+  background-color: var(--primary-fader-color);
+}
+
+/* #region Header */
+#main-header {
+  position: fixed;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  width: 100%;
+  height: 84px;
+  background: var(--primary-fader-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 5px 100px;
+  z-index: 1;
+}
+
+h1.header-heading {
+  font-family: "Fredoka One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 36px;
+
+  letter-spacing: 0.355em;
+
+  color: #000000;
+  text-align: center;
+}
+
+.header-nav-list {
+  display: flex;
+  list-style: none;
+  grid-gap: 0 14px;
+}
+
+.header-nav-list-item {
+  min-width: 100px;
+}
+
+.header-nav-list-item-link {
+  text-decoration: none;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.header-socials-media-wrapper {
+    position: absolute;
+    right: 37px;;
+    bottom: -350%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.header-socials-media-wrapper .header-line {
+    width: 2px;
+    min-height: 160px;
+    background-color: var(--primary-fader-color);
+}
+
+.socials-media-list.flex-column {
+    flex-direction: column !important;
+    gap: 12px;
+}
+
+/* #endregion End Header */
+
+/* #region Footer */
+#main-footer {
+  min-height: 174px;
+
+  background-color: var(--primary-fader-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  padding: 0 100px;
+}
+
+h1.footer-heading {
+  font-family: "Fredoka One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 36px;
+
+  letter-spacing: 0.355em;
+
+  color: #000000;
+  text-align: center;
+}
+
+.footer-detail {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.footer-content-wrapper h4 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #000000;
+}
+
+.footer-content-wrapper p,
+.footer-email-link {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #eff9f9;
+}
+
+.footer-copyright-wrapper > p {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #eff9f9;
+}
+
+/* Footer Socials Media */
+.socials-media-wrapper {
+  margin-top: 21px;
+}
+
+.socials-media-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  gap: 0 11px;
+}
+
+.socials-media-list-item {
+  width: 27px;
+  height: 27px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+
+  transition: transform 0.25s linear;
+}
+
+.socials-media-list-item:hover {
+  transform: scale(1.3);
+}
+/* #endregion End Footer */
+
+/* Hover */
+.hoverable:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Common Class */
+.text-center {
+  text-align: center;
+}
+
+/* Animation border left -> right */
+/* Animation border left to right */
+.border-anim-left-to-right {
+  position: relative;
+}
+
+.border-anim-left-to-right:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  content: "";
+  display: block;
+  transition: all ease-in-out 0.5s;
+  background-color: #0b1419;
+  height: 2px;
+  width: 0;
+}
+
+.border-anim-left-to-right:hover:after {
+  width: 100%;
+}

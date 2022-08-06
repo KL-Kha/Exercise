@@ -1,0 +1,153 @@
+.projects-heading h1 {
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+
+    /* tiffany */
+    color: var(--primary-fader-color);
+
+    /* -webkit-text-fill-color: var(--primary-fader-color);
+    -webkit-text-stroke: 1px var(--black-color); */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.projects-heading {
+    margin-top: 50px;
+    margin-bottom: 103px;
+    
+    text-align: center;
+}
+
+.projects-heading:hover h1 {
+    /* -webkit-text-fill-color: var(--black-color);
+    -webkit-text-stroke: 1px var(--primary-fader-color); */
+    transform: translateY(-20%);
+    color: var(--black-color);
+
+}
+
+.projects-container {
+    display: flex;
+    justify-self: space-between;
+    padding: 0 102px;
+
+    margin-bottom: 70px;
+    gap: 0 10px;
+}
+
+/* Sidebar */
+
+.projects-sidebar-wrapper{
+
+}
+
+.projects-sidebar-list{
+    list-style: none;
+}
+
+.projects-sidebar-list-item {
+    width: 220px;
+    height: 78px;
+
+    margin-bottom: 66px;
+
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    /* tiffany */
+
+    color: #86CAC9;
+
+    transition: font-size 0.25s linear;
+}
+
+.projects-sidebar-list-item:hover {
+    border-bottom: 5px solid var(--primary-fader-color);
+}
+
+.projects-button {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    /* identical to box height */
+
+    color: #568382 !important;
+}
+/* Item */
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-gap: 45px 40px;
+}
+
+.project-detail-item {
+    width: 302px;
+    height: 386px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(134, 202, 201, 0.7);
+
+    border-radius: 125px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    transition: transform 0.2s linear;
+}
+
+.project-detail-item:hover {
+    transform: scale(1.2);
+}
+
+.project-detail-item.project-detail-item--hidden {
+    visibility: hidden;
+}
+
+.project-detail-heading {
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+
+    margin-top: 18px;
+    padding: 19px;
+}
+
+.project-detail-content{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    
+    color: #000000;
+
+    padding: 20px;
+}
+
+.project-detail-img-wrapper{
+    width: 212px;
+    height: 212px;
+    
+    border-radius: 45px;
+}
+
+.project-detail-img {
+
+}

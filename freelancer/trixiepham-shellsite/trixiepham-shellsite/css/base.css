@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* Colors */
+  --white-color: #fff;
+  --black-color: #000;
+  --based-color: #ad5211;
+  --primary-color: #40b8a2;
+  --primary-fader-color: #86cac9;
+  --light-color: #eff9f9;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}

@@ -309,7 +309,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 60px;
-  line-height: 108px;
+  line-height: 100%;
   text-align: center;
   text-transform: capitalize;
   
@@ -355,8 +355,14 @@ body {
   .nav-menu-wrapper {
     transform: scale( calc(1.0 - 0.25));
   }
+
+  .let-work-together-heading {
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  
+  .let-work-together-heading {
+    font-size: 30px;
+  }
 }

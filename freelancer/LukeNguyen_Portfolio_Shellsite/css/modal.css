@@ -1,0 +1,95 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+
+  transition: all 0.5s ease;
+}
+
+.modal-image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 0 32px;
+    width: 100%;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: auto;
+
+  transition: transform 0.5s ease;
+}
+
+#caption:hover {
+    font-size: 32px;;
+    transform: scale(1.2);   
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+
+  color: white;
+  font-size: 70px;
+  line-height: 70px;
+
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+  transform: scale(1.4);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}

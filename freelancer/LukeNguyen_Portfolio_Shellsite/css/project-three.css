@@ -10,7 +10,45 @@
   color: currentColor;
 }
 
-.process-flex-layout-list {
-    justify-content: center;
-    align-items: center;
+.sub-header-wrapper .sub-header-item:nth-child(2) {
+  margin-right: -100px;
+}
+
+.process-research-wrapper {
+  margin-top: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px 48px;
+}
+
+.process-research-image-wrapper{
+  max-height: 300px;
+  max-width: 530px;
+}
+
+.process-research-image{
+  max-height: 300px;
+}
+
+/* Styling */
+
+.process-styling-wrapper{
+  margin-top: 55px;
+}
+
+.process-outside-container {
+  margin-top: 55px;
+  height: auto;
+}
+
+
+@media screen and (max-width: 1180px){
+  .process-research-image-wrapper{
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
 }
