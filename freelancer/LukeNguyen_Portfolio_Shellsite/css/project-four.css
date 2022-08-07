@@ -72,9 +72,3 @@
     width: 100%;
   }
 }
-
-@media screen and (max-width: 480px){
-  .process-container h1.process-heading {
-      font-size: 30px;
-  }
-}

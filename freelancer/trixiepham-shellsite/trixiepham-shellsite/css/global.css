@@ -11,7 +11,7 @@ html {
 
 main {
   /* Fixed header height  */
-  padding-top: 84px;
+  padding-top: var(--header-height);
 }
 
  #down {
@@ -62,7 +62,7 @@ main {
   margin: 0 auto;
 
   width: 100%;
-  height: 84px;
+  height: var(--header-height);
   background: var(--primary-fader-color);
 
   display: flex;

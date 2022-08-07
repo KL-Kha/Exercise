@@ -151,7 +151,9 @@
 }
 
 @media screen and (max-width: 1440px) {
-
+    .yellow-container-footer {
+        margin: 0 -26px;
+    }
 }
 
 @media screen and (max-width: 1365px) {
@@ -164,6 +166,7 @@
         position: static;
         margin-top: 20px;
     }
+
 }
 
 @media screen and (max-width: 1140px) {
@@ -175,6 +178,7 @@
     .yellow-container-footer {
         padding: 48px 26px 26px 26px;
         height: auto;
+        margin: 0;
     }
 }
 

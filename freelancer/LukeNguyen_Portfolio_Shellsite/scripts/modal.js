@@ -4,7 +4,6 @@ var modal = document.getElementById("image-popup-modal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.querySelectorAll("img.modal-popup-able");
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
 
 const popupImageModalHandler = function (event) {
     console.log(this);
@@ -18,7 +17,6 @@ const popupImageModalHandler = function (event) {
 
     modal.style.display = "block";
     modalImg.setAttribute('src', src);
-    captionText.innerHTML = this.alt;
 }
 
 img.forEach(imgNode => {

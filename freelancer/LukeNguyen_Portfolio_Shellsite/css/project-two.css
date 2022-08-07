@@ -192,7 +192,7 @@ ul.slick-dots li.slick-active button {
         max-width: none !important;
         display: block;
         width: 95%;
-        text-align: center;
+        text-align: left;
     }
 
     .user-analysis-image-wrapper {
@@ -281,12 +281,6 @@ ul.slick-dots li.slick-active button {
 }
 
 @media screen and (max-width: 600px) {
-    .process-container h1.process-heading {
-        font-size: 40px;
-        line-height: 40px;
-        margin-bottom: 40px;
-    }
-
     .wireframe-styling-container {
         padding: 0;
     }
