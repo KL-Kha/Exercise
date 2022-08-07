@@ -8,6 +8,8 @@
   --primary-color: #40b8a2;
   --primary-fader-color: #86cac9;
   --light-color: #eff9f9;
+
+  --header-height: 84px;
 }
 
 html {

@@ -10,6 +10,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/modal.css" />
   <link rel="stylesheet" href="./css/project-common.css" />
   <link rel="stylesheet" href="./css/project-three.css" />
   <link rel="stylesheet" href="./css/zoom.css" />
@@ -102,9 +103,7 @@
       </div>
 
       <div class="sub-header-image-wrapper">
-        <img srcset="
-              ./images/project-three/Saffronic/Saffron_ProjectCover.png 2x
-            " alt="Project Prototype image" class="sub-header-image" />
+        <img srcset="./images/project-three/Saffronic/Saffron_ProjectCover.png 2x" alt="Project Prototype image" class="sub-header-image modal-popup-able" />
         <a href="https://thanhluan126.wixsite.com/saffronic" target="_blank"
           class="btn btn-primary sub-header-image-btn">Go to final prototype</a>
       </div>
@@ -144,7 +143,7 @@
               <figure class="zoom" style="background: url(./images/project-three/Saffronic/objective.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-three/Saffronic/objective.png" alt="Research Saffronic"
-                  class="process-research-image">
+                  class="process-research-image modal-popup-able">
               </figure>
             </div>
 
@@ -152,7 +151,7 @@
               <figure class="zoom" style="background: url(./images/project-three/Saffronic/ta.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-three/Saffronic/ta.png" alt="Research Saffronic"
-                  class="process-research-image">
+                  class="process-research-image modal-popup-able">
               </figure>
             </div>
 
@@ -160,7 +159,7 @@
               <figure class="zoom" style="background: url(./images/project-three/Saffronic/persona1.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-three/Saffronic/persona1.png" alt="Research Saffronic"
-                  class="process-research-image">
+                  class="process-research-image modal-popup-able">
               </figure>
             </div>
 
@@ -168,7 +167,7 @@
               <figure class="zoom" style="background: url(./images/project-three/Saffronic/persona2.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-three/Saffronic/persona2.png" alt="Research Saffronic"
-                  class="process-research-image">
+                  class="process-research-image modal-popup-able">
               </figure>
             </div>
           </div>
@@ -191,7 +190,7 @@
               <figure class="zoom" style="background: url(./images/project-three/Saffronic/sitemap.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-three/Saffronic/sitemap.png" alt="Research Saffronic"
-                  class="process-research-image">
+                  class="process-research-image modal-popup-able">
               </figure>
             </div>
 
@@ -199,7 +198,7 @@
               <figure class="zoom" style="background: url(./images/project-three/Saffronic/moodboard.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-three/Saffronic/moodboard.png" alt="Research Saffronic"
-                  class="process-research-image">
+                  class="process-research-image modal-popup-able">
               </figure>
             </div>
           </div>
@@ -224,7 +223,7 @@
           <div class="process-styling-wrapper">
             <div class="process-styling-image-wrapper">
               <img src="./images/project-three/Saffronic/styling.png" alt="Research Saffronic"
-                  class="process-styling-image">
+                class="process-styling-image modal-popup-able">
             </div>
           </div>
         </div>
@@ -244,7 +243,7 @@
           <div class="process-outside-container">
             <div class="process-final-design-image-wrapper">
               <img src="./images/project-three/Saffronic/finalwork.png" alt="Research Saffronic"
-                  class="process-final-design-image">
+                class="process-final-design-image modal-popup-able">
             </div>
           </div>
         </div>
@@ -260,6 +259,22 @@
         Designed and Developed by <strong>LukeNguyen</strong> ©2022
       </p>
     </footer>
+  </div>
+
+  
+  <!-- The Modal -->
+  <div id="image-popup-modal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <div class="modal-image-wrapper">
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
   </div>
 
   <script>
@@ -279,6 +294,8 @@
       // Link to AOS
       //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
   </script>
+  <script src="./scripts/modal.js"></script>
+
 </body>
 
 </html>

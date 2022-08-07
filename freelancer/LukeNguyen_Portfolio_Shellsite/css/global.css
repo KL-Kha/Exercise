@@ -349,11 +349,13 @@ body {
 
 @media screen and (max-width: 768px) {
   .nav-back-wrapper {
-    transform: scale(0.9);
+    transform: scale(0.7);
+    left: 10%;
   }
 
   .nav-menu-wrapper {
-    transform: scale( calc(1.0 - 0.25));
+    transform: scale( calc(1.0 - 0.4));
+    right: 10%;
   }
 
   .let-work-together-heading {
@@ -364,5 +366,13 @@ body {
 @media screen and (max-width: 480px) {
   .let-work-together-heading {
     font-size: 30px;
+  }
+
+  .nav-back-wrapper {
+    left: 1%;
+  }
+
+  .nav-menu-wrapper {
+    right: 1%;
   }
 }

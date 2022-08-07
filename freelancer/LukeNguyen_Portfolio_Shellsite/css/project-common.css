@@ -295,7 +295,7 @@
   }
 
   .process-container {
-    text-align: center;
+    text-align: left;
   }
 
   .process-container p.process-content {
@@ -314,8 +314,9 @@
   }
 
   .process-container h1.process-heading {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 32px;
   }
 
   .process-flex-layout-list li.process-flex-layout-item {
@@ -325,7 +326,9 @@
   }
 
   .process-flex-layout-wrapper h1.process-flex-layout-heading {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
+
+
 /* #endregion */

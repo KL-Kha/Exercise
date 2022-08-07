@@ -10,6 +10,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/modal.css" />
   <link rel="stylesheet" href="./css/project-common.css" />
   <link rel="stylesheet" href="./css/project-four.css" />
   <link rel="stylesheet" href="./css/zoom.css" />
@@ -106,7 +107,7 @@
       </div>
 
       <div class="sub-header-image-wrapper">
-        <img src="./images/project-four/DTF/cover.png" alt="Project Prototype image" class="sub-header-image" />
+        <img src="./images/project-four/DTF/cover.png" alt="Project Prototype image" class="sub-header-image modal-popup-able" />
         <a href="https://www.figma.com/proto/3kIhiWoYzAjW7za6KXyGWw/Digilayout_TermProject?node-id=202%3A1082&scaling=min-zoom&page-id=202%3A638&starting-point-node-id=202%3A1082"
           target="_blank" class="btn btn-primary sub-header-image-btn">Go to final prototype</a>
       </div>
@@ -151,7 +152,7 @@
               <figure class="zoom" style="background: url(./images/project-four/DTF/primary_ta.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-four/DTF/primary_ta.png" alt="Research Downtown Flea Market"
-                  class="research-flex-image">
+                  class="research-flex-image modal-popup-able">
               </figure>
             </div>
 
@@ -159,7 +160,7 @@
               <figure class="zoom" style="background: url(./images/project-four/DTF/second_ta.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-four/DTF/second_ta.png" alt="Research Downtown Flea Market"
-                  class="research-flex-image">
+                  class="research-flex-image modal-popup-able">
               </figure>
             </div>
           </div>
@@ -175,7 +176,7 @@
             <figure class="zoom" style="background: url(./images/project-four/DTF/competitor.png)"
               onmousemove="zoom(event)" ontouchmove="zoom(event)">
               <img src="./images/project-four/DTF/competitor.png" alt="Research Downtown Flea Market"
-                class="research-image">
+                class="research-image modal-popup-able">
             </figure>
           </div>
 
@@ -190,14 +191,16 @@
               <figure class="zoom" style="background: url(./images/project-four/DTF/mindmap.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-four/DTF/mindmap.png" alt="Ideation Mindmap Downtown Flea Market"
-                  class="ideation-image">
+                  class="ideation-image modal-popup-able">
               </figure>
             </div>
 
             <div class="ideation-content-wrapper">
               <p class="process-content ideation-content">
-                The mind map was used to brainstorm ideas which consist of general requirements and some relative topics of
-                our DTM. From there, with images that we found, a mood board is created to identify the overall theme and
+                The mind map was used to brainstorm ideas which consist of general requirements and some relative topics
+                of
+                our DTM. From there, with images that we found, a mood board is created to identify the overall theme
+                and
                 mood&tone to develop the Logo, Brand title, and Web Design components to incorporate into our website in
                 further steps.
               </p>
@@ -220,7 +223,7 @@
             <figure class="zoom" style="background: url(./images/project-four/DTF/concept.png)"
               onmousemove="zoom(event)" ontouchmove="zoom(event)">
               <img src="./images/project-four/DTF/concept.png" alt="Styling & sitemap concept Downtown Flea Market"
-                class="styling-sitemap-image">
+                class="styling-sitemap-image modal-popup-able">
             </figure>
           </div>
 
@@ -237,7 +240,7 @@
             <figure class="zoom" style="background: url(./images/project-four/DTF/sitemap.png)"
               onmousemove="zoom(event)" ontouchmove="zoom(event)">
               <img src="./images/project-four/DTF/sitemap.png" alt="Styling & sitemap sitemap Downtown Flea Market"
-                class="styling-sitemap-image">
+                class="styling-sitemap-image modal-popup-able">
             </figure>
           </div>
         </div>
@@ -260,7 +263,7 @@
               <figure class="zoom" style="background: url(./images/project-four/DTF/lowfi.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-four/DTF/lowfi.png" alt="wireframe & prototpye Downtown Flea Market"
-                  class="wireframe-prototpye-image">
+                  class="wireframe-prototpye-image modal-popup-able">
               </figure>
             </div>
           </div>
@@ -270,7 +273,7 @@
               <figure class="zoom" style="background: url(./images/project-four/DTF/highfi.png)"
                 onmousemove="zoom(event)" ontouchmove="zoom(event)">
                 <img src="./images/project-four/DTF/highfi.png" alt="wireframe & prototpye Downtown Flea Market"
-                  class="wireframe-prototpye-image">
+                  class="wireframe-prototpye-image modal-popup-able">
               </figure>
             </div>
           </div>
@@ -287,6 +290,21 @@
         Designed and Developed by <strong>LukeNguyen</strong> ©2022
       </p>
     </footer>
+  </div>
+
+  <!-- The Modal -->
+  <div id="image-popup-modal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <div class="modal-image-wrapper">
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
   </div>
 
   <script>
@@ -306,6 +324,7 @@
       // Link to AOS
       //https://michalsnik.github.io/aos/?fbclid=IwAR1TYfLDGoBj7QK7j2bB9cY3RVEpeaowZpxw19ZZI3sIvdum6TDp_oIHoME
   </script>
+  <script src="./scripts/modal.js"></script>
 </body>
 
 </html>

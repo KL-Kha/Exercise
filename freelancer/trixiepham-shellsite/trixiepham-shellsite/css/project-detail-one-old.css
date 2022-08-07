@@ -1,0 +1,247 @@
+.project-overview-wrapper {
+    min-height: 502px;
+    position: relative;
+}
+
+.project-overview-wrapper::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+
+    background-image: url('../images/project-detail-one/downtown.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project-overview-content-wrapper {
+    position: absolute;
+    
+    width: 559px;
+    height: 352px;
+
+    top: 80px;
+    left: 780px;
+
+    background-color: #F2FCFC;
+    border-radius: 58px;
+    z-index: 1;
+
+    padding-top: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.project-overview-content-heading {
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+
+    text-align: center;
+    margin-bottom: 20px;
+
+    color: #000000;
+}
+
+.project-overview-content {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    
+    color: #000000;
+}
+
+/* Graphic design */
+.graphic-design {
+    margin-left: 104px;
+    margin-top: 50px;
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.graphic-design h1 {
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 50px;
+
+    /* tiffany */
+    color: #86CAC9;
+/* 
+    -webkit-text-fill-color: var(--primary-fader-color);
+    -webkit-text-stroke: 1px var(--black-color); */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.graphic-design h2 {
+    margin-left: 16px;
+    margin-bottom: -8px;
+
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+
+    color: #000000;
+}
+
+/* Project description */
+.project-description-wrapper{
+    text-align: center;
+
+    padding: 0 80px;
+    margin-top: 22px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.project-description-container h6{
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* tiffany */
+    color: #86CAC9;
+
+    margin-bottom: 10px;
+}
+
+.project-description-container p {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #000000;
+    
+    margin-bottom: 4px;
+}
+
+/* Main content */
+.content-primary-header-container {
+    height: 151px;
+    background: rgba(134, 202, 201, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 62px 0;
+}
+
+.content-primary-header-container .content-header-section-number {
+    font-family: 'Fredericka the Great';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 148px;
+    line-height: 181px;
+
+    color: rgba(0, 0, 0, 0.4);
+
+    margin-right: 26px;
+}
+
+.content-primary-header-container .content-header-section-heading {  
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+
+    /* tiffany */
+    color: #696969;
+/* 
+    -webkit-text-fill-color: var(--primary-fader-color);
+    -webkit-text-stroke: 1px var(--black-color); */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.content-primary-section {
+    padding: 0 100px;
+}
+
+.content-primary-section-heading-wrapper {
+    margin-bottom: 22px;
+}
+
+.content-primary-section-heading-wrapper h4.content-primary-section-heading {
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: #86CAC9;
+}
+
+.content-primary-section-content-wrapper {
+    margin-bottom: 45px;
+}
+
+.content-primary-section-content-wrapper p.content-primary-section-content {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 38px;
+
+    color: #000000;
+}
+
+.content-primary-section-heading-wrapper.section-heading-margin {
+    margin-bottom: 45px;
+}
+
+.content-primary-section-img-wrapper {
+    margin-bottom: 45px;
+
+}
+
+/* information-gathering-container */
+.information-gathering-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-primary-section-content-wrapper.information-gathering-section-content {
+    max-width: 670px;
+}
+
+/* mindmap-container */
+
+.mindmap-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: row-reverse;
+}
+
+.content-primary-section-content-wrapper.mindmap-section-content {
+    max-width: 540px;
+}
